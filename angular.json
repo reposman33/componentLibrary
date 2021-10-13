@@ -30,7 +30,11 @@
 							"projects/showroom/src/favicon.ico",
 							"projects/showroom/src/assets"
 						],
-						"styles": ["projects/showroom/src/styles.scss"],
+						"styles": [
+							"projects/showroom/src/styles.scss",
+							"projects/ui-components/src/styles/normalize.css",
+							"projects/ui-components/src/styles/normalize_custom.css"
+						],
 						"scripts": []
 					},
 					"configurations": {
@@ -62,15 +66,12 @@
 							"extractLicenses": false,
 							"sourceMap": true,
 							"namedChunks": true,
-							"fileReplacements": [
-								{
-									"replace": "projects/showroom/src/environments/environment.ts",
-									"with": "projects/showroom/src/environments/environment.dev.ts"
-								}
-							]
+							"stylePreprocessorOptions": {
+								"includePaths": ["projects/ui-components/src/styles"]
+							}
 						}
 					},
-					"defaultConfiguration": "production"
+					"defaultConfiguration": "development"
 				},
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
@@ -250,23 +251,23 @@
 				}
 			}
 		},
-		"components": {
+		"ui-components": {
 			"projectType": "library",
-			"root": "projects/components",
-			"sourceRoot": "projects/components/src",
+			"root": "projects/ui-components",
+			"sourceRoot": "projects/ui-components/src",
 			"prefix": "lib",
 			"architect": {
 				"build": {
 					"builder": "@angular-devkit/build-angular:ng-packagr",
 					"options": {
-						"project": "projects/components/ng-package.json"
+						"project": "projects/ui-components/ng-package.json"
 					},
 					"configurations": {
 						"production": {
-							"tsConfig": "projects/components/tsconfig.lib.prod.json"
+							"tsConfig": "projects/ui-components/tsconfig.lib.prod.json"
 						},
 						"development": {
-							"tsConfig": "projects/components/tsconfig.lib.json"
+							"tsConfig": "projects/ui-components/tsconfig.lib.json"
 						}
 					},
 					"defaultConfiguration": "production"
@@ -274,13 +275,13 @@
 				"test": {
 					"builder": "@angular-devkit/build-angular:karma",
 					"options": {
-						"main": "projects/components/src/test.ts",
-						"tsConfig": "projects/components/tsconfig.spec.json",
-						"karmaConfig": "projects/components/karma.conf.js"
+						"main": "projects/ui-components/src/test.ts",
+						"tsConfig": "projects/ui-components/tsconfig.spec.json",
+						"karmaConfig": "projects/ui-components/karma.conf.js"
 					}
 				}
 			}
 		}
 	},
-	"defaultProject": "components"
+	"defaultProject": "ui-components"
 }

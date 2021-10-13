@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: rgb(187, 116, 116) auto 1px;
+}
+
+html {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	height: 100%;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	background: #eee;
+	color: #222;
+	font-size: 12pt;
+	height: 100%;
+	line-height: 1.42;
+}
