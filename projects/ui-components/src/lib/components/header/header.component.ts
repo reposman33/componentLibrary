@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
 export class HeaderComponent {
 	@Input() title!: string;
 	@Input() subTitle: string = '';
-	@Input() align: 'left' | 'center' | 'right' = 'center';
+	@Input() align: 'left' | 'center' | 'right' | 'around' = 'center';
+	public separator = ' | ';
 }
