@@ -1,2 +1,31 @@
-<h1>This is the page containing the Header component</h1>
-<lib-header></lib-header>
+<h2>This is the page containing the Header component</h2>
+
+<div class="component-section">
+	<h3>
+		This header component contains a title and a subtitle. The subtitle is optional.
+	</h3>
+	<lib-header title="This is the title" subTitle="This is the subtitle"> </lib-header>
+</div>
+
+<div class="component-section">
+	<h3>This is a header with a title but without a subtitle.</h3>
+	<lib-header title="This is the title"> </lib-header>
+</div>
+
+<div class="component-section">
+	<h3>This is a header with title and subtitle left aligned.</h3>
+	<lib-header
+		title="This is the title"
+		align="left"
+		subTitle="This is the subtitle"
+	></lib-header>
+</div>
+
+<div class="component-section">
+	<h3>This is a header with title and subtitle right aligned.</h3>
+	<lib-header
+		title="This is the title"
+		align="right"
+		subTitle="This is the subtitle"
+	></lib-header>
+</div>

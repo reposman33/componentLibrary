@@ -1,6 +1,8 @@
-<section class="hero hero--primary">
-	<div class="hero--body">
-		<p class="title">Wegens werkzaamheden gesloten</p>
-		<p class="subtitle">Even geduld aub, er wordt gewerkt aan een facelift.</p>
-	</div>
-</section>
+<div
+	class="header"
+	[ngClass]="{ 'align-left': align === 'left', 'align-right': align === 'right' }"
+>
+	<span class="title">{{ title }}</span
+	>{{ subTitle.length > 0 ? '|' : '' }}
+	<span class="subtitle">{{ subTitle }}</span>
+</div>

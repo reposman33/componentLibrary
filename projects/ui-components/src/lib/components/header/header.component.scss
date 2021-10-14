@@ -2,33 +2,38 @@
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.hero {
-	border: 1px solid transparent;
-	border-radius: 0.5rem;
-	box-shadow: 0.5rem 0.5rem 1rem #ccc;
-	margin: 1rem;
-	padding: 2rem;
-}
-
-.hero--primary {
-	background-color: #00d1b2;
-}
-
-.hero--body {
-	display: flex;
-	flex-direction: column;
+.header {
 	align-items: center;
+	border: 1px solid #ccc;
+	border-radius: 0.5rem;
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+	width: 100%;
+}
+
+.align-left {
+	justify-content: flex-start;
+}
+
+.align-center {
+	justify-content: center;
+}
+
+.align-right {
+	justify-content: flex-end;
 }
 
 .title {
-	color: white;
-	font-size: 3rem;
+	color: slategray;
+	font-size: 1.5rem;
 	font-weight: 600;
 	margin: 1rem;
 }
 
 .subtitle {
-	color: #fff;
-	font-size: 1.75rem;
+	color: slategray;
+	font-size: 1.25rem;
 	font-weight: 400;
+	margin: 1rem;
 }
