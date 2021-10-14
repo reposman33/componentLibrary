@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header';
 import { NavItemComponent } from './nav-item';
 import { NavListComponent } from './nav-list';
@@ -10,6 +11,6 @@ const COMPONENTS = [HeaderComponent, NavItemComponent, NavListComponent, PageCom
 @NgModule({
 	declarations: COMPONENTS,
 	exports: COMPONENTS,
-	imports: [CommonModule],
+	imports: [CommonModule, RouterModule],
 })
 export class DemoComponentsModule {}

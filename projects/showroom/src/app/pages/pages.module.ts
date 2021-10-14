@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderModule } from '@ui-components';
 import { HeaderPage } from './header/header.page';
+import { HeaderModule } from '@ui-components';
 
 @NgModule({
 	declarations: [HeaderPage],

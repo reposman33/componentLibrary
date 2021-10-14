@@ -2,10 +2,13 @@
 	<app-header header>Component Showroom</app-header>
 
 	<ng-container sidebar>
-		<h2>Componenten</h2>
-		<!-- TODO dynamisch genereren links -->
-		<a routerLink="header">Header</a>
-		<!-- TODO -->
+		<h1>Componenten</h1>
+
+		<app-nav-list type="UI componenten">
+			<app-nav-item *ngFor="let link of links" [url]="link.url">
+				{{ link.title }}
+			</app-nav-item>
+		</app-nav-list>
 	</ng-container>
 
 	<router-outlet></router-outlet>
