@@ -1,15 +1,12 @@
-<div class="page">
-	<div class="header">
-		<h1>Component Showroom</h1>
-	</div>
+<app-page>
+	<app-header header>Component Showroom</app-header>
 
-	<div class="page__body">
-		<nav class="sidebar">
-			<h2>Componenten</h2>
-			<a routerLink="header">Header</a>
-		</nav>
-		<div class="page__content">
-			<router-outlet></router-outlet>
-		</div>
-	</div>
-</div>
+	<ng-container sidebar>
+		<h2>Componenten</h2>
+		<!-- TODO dynamisch genereren links -->
+		<a routerLink="header">Header</a>
+		<!-- TODO -->
+	</ng-container>
+
+	<router-outlet></router-outlet>
+</app-page>

@@ -1,0 +1,13 @@
+<div class="page">
+	<ng-content select="[header]"></ng-content>
+
+	<div class="page__body">
+		<nav class="sidebar">
+			<ng-content select="[sidebar]"></ng-content>
+		</nav>
+
+		<div class="page__content">
+			<ng-content></ng-content>
+		</div>
+	</div>
+</div>

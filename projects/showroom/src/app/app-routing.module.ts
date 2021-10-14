@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
-import { HeaderPage } from './pages/header/header.page';
 import { LandingComponent } from './pages/landing/landing.component';
 import { PagesModule } from './pages/pages.module';
 
@@ -15,7 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-	declarations: [LayoutComponent],
+	declarations: [],
 	imports: [PagesModule, RouterModule.forRoot(routes)],
 	exports: [],
 })
