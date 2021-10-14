@@ -7,6 +7,7 @@ import { LayoutComponent } from './layout/layout.component';
 
 import { LandingComponent } from './pages/landing/landing.component';
 import { HeaderPage } from './pages/header/header.page';
+import { LogoComponent } from './pages/logo/logo.component';
 
 const routes: Routes = [
 	{
@@ -15,6 +16,7 @@ const routes: Routes = [
 		children: [
 			{ path: '', pathMatch: 'full', component: LandingComponent },
 			{ path: 'header', component: HeaderPage },
+			{ path: 'logo', component: LogoComponent },
 		],
 	},
 ];

@@ -7,5 +7,8 @@ import { Link } from '../models/Link';
 	styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent {
-	public links: Link[] = [{ title: 'Header', url: 'header' }];
+	public links: Link[] = [
+		{ title: 'Header', url: 'header' },
+		{ title: 'Logo', url: 'logo' },
+	];
 }
