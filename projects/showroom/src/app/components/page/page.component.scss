@@ -15,12 +15,13 @@
 nav.page__sidebar {
 	background-color: rgb(219, 218, 134);
 	color: white;
-	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
 	padding: 1rem;
 }
 
 .page__content {
 	background-color: snow;
-	flex-grow: 5;
+	flex-grow: 2;
 	padding: 1rem;
 }
