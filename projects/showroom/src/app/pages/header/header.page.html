@@ -40,3 +40,16 @@
 		subTitle="This is the subtitle"
 	></lib-header>
 </div>
+
+<div class="component-section">
+	<h3>This is a header with logo, title and subtitle .</h3>
+	<lib-header title="This is the title" subTitle="This is the subtitle">
+		<ng-container slot="logo">
+			<lib-logo
+				imageUrl="assets/images/logos/CGI-logo-192x192.png"
+				alt="Logo van een bekend computermerk"
+			>
+			</lib-logo>
+		</ng-container>
+	</lib-header>
+</div>

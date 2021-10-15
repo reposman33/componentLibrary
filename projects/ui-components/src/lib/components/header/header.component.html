@@ -6,6 +6,9 @@
 		'justify-around': align === 'around'
 	}"
 >
+	<span class="logo">
+		<ng-content select="[slot=logo]"></ng-content>
+	</span>
 	<span class="title">{{ title }}</span>
 	<span class="separator">{{ subTitle.length > 0 ? separator : '' }}</span>
 	<span class="subtitle">{{ subTitle }}</span>
