@@ -68,7 +68,14 @@
 							"namedChunks": true,
 							"stylePreprocessorOptions": {
 								"includePaths": ["projects/ui-components/src/styles"]
-							}
+							},
+							"assets": [
+								{
+									"glob": "**/*",
+									"input": "./projects/webapp/src/assets",
+									"output": "/assets"
+								}
+							]
 						}
 					},
 					"defaultConfiguration": "development"
