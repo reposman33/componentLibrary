@@ -8,6 +8,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { HeaderPage } from './pages/header/header.page';
 import { LogoComponent } from './pages/logo/logo.component';
+import { TabGroupPage } from './pages/tab-group/tab-group.page';
 
 const routes: Routes = [
 	{
@@ -17,6 +18,7 @@ const routes: Routes = [
 			{ path: '', pathMatch: 'full', component: LandingComponent },
 			{ path: 'header', component: HeaderPage },
 			{ path: 'logo', component: LogoComponent },
+			{ path: 'tabgroup', component: TabGroupPage },
 		],
 	},
 ];

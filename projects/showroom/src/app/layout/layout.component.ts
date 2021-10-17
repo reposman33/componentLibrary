@@ -10,5 +10,6 @@ export class LayoutComponent {
 	public links: Link[] = [
 		{ title: 'Header', url: 'header' },
 		{ title: 'Logo', url: 'logo' },
+		{ title: 'Tabgroup', url: 'tabgroup' },
 	];
 }
