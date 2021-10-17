@@ -4,52 +4,67 @@
 	<h3>
 		This header component contains a title and a subtitle. The subtitle is optional.
 	</h3>
-	<lib-header title="This is the title" subTitle="This is the subtitle"> </lib-header>
+	<div class="component">
+		<lib-header title="This is the title" subTitle="This is the subtitle"> </lib-header>
+	</div>
 </div>
 
 <div class="component-section">
 	<h3>This is a header with a title but without a subtitle.</h3>
-	<lib-header title="This is the title"> </lib-header>
+	<div class="component">
+		<lib-header title="This is the title"> </lib-header>
+	</div>
 </div>
 
 <div class="component-section">
 	<h3>This is a header with title and subtitle left aligned.</h3>
-	<lib-header
-		title="This is the title"
-		align="left"
-		subTitle="This is the subtitle"
-	></lib-header>
+	<div class="component">
+		<lib-header
+			title="This is the title"
+			align="left"
+			subTitle="This is the subtitle"
+		></lib-header>
+	</div>
 </div>
 
 <div class="component-section">
 	<h3>This is a header with title and subtitle right aligned.</h3>
-	<lib-header
-		title="This is the title"
-		align="right"
-		subTitle="This is the subtitle"
-	></lib-header>
+
+	<div class="component">
+		<div class="component">
+			<lib-header
+				title="This is the title"
+				align="right"
+				subTitle="This is the subtitle"
+			></lib-header>
+		</div>
+	</div>
 </div>
 
 <div class="component-section">
 	<h3>
 		This is a header with title and subtitle spread evenly across the width of the header.
 	</h3>
-	<lib-header
-		title="This is the title"
-		align="around"
-		subTitle="This is the subtitle"
-	></lib-header>
+	<div class="component">
+		<lib-header
+			title="This is the title"
+			align="around"
+			subTitle="This is the subtitle"
+		></lib-header>
+	</div>
 </div>
 
 <div class="component-section">
 	<h3>This is a header with logo, title and subtitle .</h3>
-	<lib-header title="This is the title" subTitle="This is the subtitle">
-		<ng-container slot="logo">
-			<lib-logo
-				imageUrl="assets/images/logos/CGI-logo-192x192.png"
-				alt="Logo van een bekend computermerk"
-			>
-			</lib-logo>
-		</ng-container>
-	</lib-header>
+	<div class="component">
+		<lib-header title="This is the title" subTitle="This is the subtitle">
+			<ng-container slot="logo">
+				<lib-logo
+					imageUrl="assets/images/logos/CGI-logo-192x192.png"
+					alt="Logo van een bekend computermerk"
+				>
+				</lib-logo>
+			</ng-container>
+		</lib-header>
+	</div>
 </div>
