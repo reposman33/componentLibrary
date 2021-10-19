@@ -1,0 +1,36 @@
+$tab-border-dark: #b77f7f;
+$tab-border-light: #d9adad;
+$tab-text-color: #4869b5;
+$tab-text-selected-color: white;
+$tab-backgroundColor-light: #e48e96;
+$tab-backgroundColor-light: #e48e96;
+$tab-backgroundColor-darkenSmall: 10%;
+$tab-backgroundColor-darkenMedium: 15%;
+
+.tab-item {
+	border-bottom: 1px solid $tab-border-light;
+	border-left: 3px groove $tab-border-dark;
+	border-right: 1px solid $tab-border-light;
+	border-top: 3px groove $tab-border-dark;
+	border-top-left-radius: 20px;
+	color: $tab-text-color;
+	font-size: 2rem;
+	font-weight: 600;
+	padding: 0 2rem;
+	text-decoration: none;
+
+	&:hover {
+		background-color: $tab-backgroundColor-light;
+		color: yellow;
+		cursor: pointer;
+	}
+}
+
+.tab--active {
+	color: darken(#e48e96, $tab-backgroundColor-darkenSmall);
+}
+
+.tab--selected {
+	background-color: darken(#e48e96, $tab-backgroundColor-darkenMedium);
+	color: $tab-text-selected-color;
+}

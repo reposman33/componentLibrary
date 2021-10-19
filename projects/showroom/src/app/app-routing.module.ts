@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+// SHOWROOM PAGES
 import { LayoutModule } from './layout/layout.module';
-import { PagesModule } from './pages/pages.module';
 import { LayoutComponent } from './layout/layout.component';
 
+import { PagesModule } from './pages/pages.module';
 import { LandingComponent } from './pages/landing/landing.component';
 import { HeaderPage } from './pages/header/header.page';
 import { LogoComponent } from './pages/logo/logo.component';

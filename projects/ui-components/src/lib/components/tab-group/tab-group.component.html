@@ -1,1 +1,13 @@
-<p>tab-group works!</p>
+<div class="tabgroup__container">
+	<div class="tabgroup__header">
+		<div class="tabgroup-header__tab-item" *ngFor="let tab of tabs">
+			<lib-tab
+				[title]="tab.title"
+				[section]="tab.section"
+				(select)="selectTab($event)"
+				[selectedTab]="selectedTab"
+			></lib-tab>
+		</div>
+	</div>
+	<router-outlet></router-outlet>
+</div>

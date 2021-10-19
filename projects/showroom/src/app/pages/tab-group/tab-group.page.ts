@@ -6,6 +6,20 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./tab-group.page.scss'],
 })
 export class TabGroupPage implements OnInit {
+	public tabs = [
+		{
+			title: 'About',
+			section: 'over',
+		},
+		{
+			title: 'Bio',
+			section: 'bio',
+		},
+		{
+			title: 'Portfolio',
+			section: 'portfolio',
+		},
+	];
 	constructor() {}
 
 	ngOnInit(): void {}

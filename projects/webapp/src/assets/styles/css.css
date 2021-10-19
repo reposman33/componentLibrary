@@ -1,0 +1,42 @@
+body {
+	background: none;
+	background-color: lightsteelblue;
+}
+
+div.pageContent {
+	background: none;
+}
+
+div#content {
+	background: none;
+	background-color: #778899;
+}
+
+div#contentTop {
+	background: none;
+	background-color: #778899;
+}
+
+div#contentBottom {
+	background: none;
+	background-color: #778899;
+}
+
+table.projects {
+	background: none;
+	background-color: #445;
+}
+
+div.topNavigation {
+	font-variant: normal;
+}
+
+div.topNavigation ul li.navmenuItemSelected {
+	background: none;
+	background-color: #778899;
+}
+
+div.topNavigation ul li a,
+.topNavigation ul li a:visited,
+div.topNavigation ul li a:hover {
+}

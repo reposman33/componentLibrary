@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ApiModulesComponent } from './api-modules.component';
+import { TabComponent } from './tab.component';
 
-describe('ApiModulesComponent', () => {
-  let component: ApiModulesComponent;
-  let fixture: ComponentFixture<ApiModulesComponent>;
+describe('TabComponent', () => {
+  let component: TabComponent;
+  let fixture: ComponentFixture<TabComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ApiModulesComponent ]
+      declarations: [ TabComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ApiModulesComponent);
+    fixture = TestBed.createComponent(TabComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

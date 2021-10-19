@@ -3,9 +3,8 @@
 	"compileOnSave": false,
 	"compilerOptions": {
 		"paths": {
-			"api-modules": ["dist/api-modules/api-modules", "dist/api-modules"],
-			"components": ["dist/components/components", "dist/components"],
-			"@ui-components": ["projects/ui-components/src/lib"]
+			"@api-modules": ["projects/api-modules/src/lib"],
+			"@ui-components/*": ["projects/ui-components/src/*"]
 		},
 		"baseUrl": "./",
 		"outDir": "./dist/out-tsc",

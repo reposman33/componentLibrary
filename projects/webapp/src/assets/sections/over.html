@@ -1,0 +1,120 @@
+<div id="content">
+	<div
+		id="cywNote"
+		draggable=""
+		class="cywNote ng-scope"
+		ng-init="show=true"
+		ng-show="show"
+	>
+		<div>
+			<div
+				style="
+					width: 100%;
+					height: 20px;
+					background-color: #ccc;
+					border-radius: 10px;
+					margin-bottom: 10px;
+					text-align: center;
+				"
+				class="ng-binding"
+			>
+				<span
+					class="glyphicon glyphicon-remove-circle"
+					style="float: right; font-size: 1.5em; cursor: pointer; margin-right: 5px"
+					ng-click="hide()"
+				></span>
+			</div>
+			<div ng-transclude="">
+				<p class="ng-scope">
+					Hallo bezoeker! Om mijn AngularJS activiteiten wat zichtbaarder te maken heb ik
+					een tooltje ontwikkeld in Angular: de ChangeYourSite tool. Bestaande uit 2
+					ng-apps die ieder een directive bevatten: eentje waarmee je een element kunt
+					verslepen (versleep dit venster maar) en eentje waarmee je de CSS rules van een
+					site kan aanpassen (klik op de button). Je kan zelfs de oude website weer
+					aanzetten!
+				</p>
+
+				<button class="show ng-scope" scriptable="" ng-click="show('cyw')">
+					Create Your Site
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<p>
+		<img
+			style="float: left; margin-right: 10px"
+			src="/includes/img/marc/marc_pas.jpg"
+			alt="marc"
+			width="101"
+			height="127"
+		/>Na mijn studie Psychologie aan de UvA werkte ik van 1993 tot 1996 als CD-ROM
+		ontwikkelaar in Israel. Tot 2004 heb ik daar en later ook in Nederland bij
+		verschillende bedrijven CD-ROM producties gemaakt. In 2006 ben ik gaan werken als
+		backend webdeveloper. Van januari 2006 tot eind 2009 was ik fulltime werkzaam als
+		webdeveloper en vanaf 2009 werk ik als freelance webdeveloper. Sinds 2012 richt ik me
+		op front end webdevelopment en werk voornamelijk met JavaScript en JavaScript
+		frameworks.
+	</p>
+	<p>Hieronder enkele ontwikkeltechnieken en -tools waar ik mee gewerkt heb:</p>
+	<table style="clear: both; width: 100%; height: 158px; margin-top: 10px" border="0">
+		<tbody>
+			<tr>
+				<td>
+					<ul>
+						<li>JavaScript / HTML / CSS</li>
+						<li>
+							<a
+								title="Jquery Javascript Library"
+								href="http://api.jquery.com/"
+								target="_blank"
+								>JQuery</a
+							>
+						</li>
+						<li>AngularJS</li>
+						<li>
+							<a
+								title="The JavaScript Task Runner"
+								href="http://gruntjs.com"
+								target="_blank"
+								>Grunt</a
+							>/<a
+								title="A package manager for the web"
+								href="http://bower.io"
+								target="_blank"
+								>Bower</a
+							>/<a
+								title="Modern workflows for modern webapps"
+								href="http://yeoman.io"
+								target="_blank"
+								>Yeoman</a
+							>
+						</li>
+						<li>Subversion version control</li>
+						<li>
+							<a
+								title="JavaScript RIA Framework"
+								href="http://www.sencha.com/products/extjs/"
+								target="_blank"
+								>Sencha Ext JS Javascript framework</a
+							>
+						</li>
+						<li>
+							Backend programming: Java 7* /
+							<a
+								title="Adobe ColdFusion"
+								href="http://www.adobe.com/products/coldfusion-family.html"
+								target="_blank"
+								>ColdFusion 8*,9 </a
+							>/ SQL
+						</li>
+						<li>...<br /><span style="font-size: xx-small">*: certificaat</span></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td style="vertical-align: top">&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

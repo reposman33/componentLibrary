@@ -1,0 +1,30 @@
+$border--color: rgb(219, 103, 103);
+
+.tabgroup__container {
+	height: 100%;
+	width: 100%;
+}
+
+.tabgroup__header {
+	align-items: center;
+	background-color: $border--color;
+	border-top-left-radius: 150px;
+	border-bottom-right-radius: 150px;
+	display: flex;
+	height: 15%;
+	justify-content: space-around;
+}
+
+.tabgroup-header__tab-item {
+	&:first-of-type {
+		margin-left: 4rem;
+	}
+}
+
+.tabgroup__content {
+	border-left: 10px solid $border--color;
+	height: 100%;
+	overflow: auto;
+	padding: 2rem;
+	width: 100%;
+}

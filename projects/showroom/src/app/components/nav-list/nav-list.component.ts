@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
 	styleUrls: ['./nav-list.component.scss'],
 })
 export class NavListComponent {
-	@Input() public type!: string;
+	@Input() public type: string = '';
 }
