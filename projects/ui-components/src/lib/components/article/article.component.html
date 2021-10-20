@@ -1,1 +1,34 @@
-<p>article works!</p>
+<div class="article">
+	<div class="article__header">
+		<div class="article__title">{{ title }}</div>
+		<div class="article__subTitle">{{ subTitle }}</div>
+		<i
+			[ngClass]="drawerOpen ? 'article--visible' : 'article--hidden'"
+			(click)="drawerOpen = !drawerOpen"
+		>
+		</i>
+	</div>
+
+	<div [ngClass]="drawerOpen ? 'article__content--expanded' : 'article__content'">
+		<p>
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione mollitia optio
+			molestiae deserunt quis, quae provident eligendi hic eveniet odit officiis
+			recusandae veniam minus. Odio inventore doloribus vel rerum cum?
+		</p>
+		<p>
+			Suscipit velit incidunt quisquam quos aliquid numquam harum in atque hic debitis?
+			Voluptatum, debitis magnam autem labore inventore numquam nobis in quae quidem
+			commodi, quis enim ex natus explicabo! Eaque.
+		</p>
+		<p>
+			Optio aliquid necessitatibus minus nesciunt fugit voluptas deserunt quae autem
+			doloribus? Esse, repudiandae beatae maxime facere necessitatibus expedita quo labore
+			quam et a odio neque mollitia quis vero officiis porro?
+		</p>
+		<p>
+			Facilis quaerat asperiores velit possimus? Esse consequuntur excepturi quis,
+			suscipit itaque molestias odio quasi corporis dolor unde doloribus praesentium culpa
+			numquam tempora libero ipsum inventore ducimus beatae? Neque, molestias explicabo!
+		</p>
+	</div>
+</div>

@@ -7,7 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
 	@Input() title: string = '';
-	@Input() teaser: string = '';
+	@Input() subTitle: string = '';
+
+	public drawerOpen: boolean = false;
 
 	constructor() {}
 
