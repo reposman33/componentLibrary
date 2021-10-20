@@ -8,6 +8,7 @@ import { Link } from '../models/Link';
 })
 export class LayoutComponent {
 	public links: Link[] = [
+		{ title: 'Article', url: 'article' },
 		{ title: 'Header', url: 'header' },
 		{ title: 'Logo', url: 'logo' },
 		{ title: 'Tabgroup', url: 'tabgroup' },
