@@ -2,11 +2,10 @@
 	<div class="article__header">
 		<div class="article__title">{{ title }}</div>
 		<div class="article__subTitle">{{ subTitle }}</div>
-		<i
-			[ngClass]="drawerOpen ? 'article--visible' : 'article--hidden'"
+		<span
+			[ngClass]="drawerOpen ? 'caret--down' : 'caret--left'"
 			(click)="drawerOpen = !drawerOpen"
-		>
-		</i>
+		></span>
 	</div>
 
 	<div [ngClass]="drawerOpen ? 'article__content--expanded' : 'article__content'">

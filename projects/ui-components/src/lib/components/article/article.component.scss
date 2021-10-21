@@ -52,25 +52,19 @@ $article-expansion-speed: 0.5s;
 	height: 20rem;
 }
 
-.article--hidden,
-.article--visible {
-	color: black;
+.caret--left,
+.caret--down {
+	background-color: darken($article-heading-background-color, 20%);
 	cursor: pointer;
-	display: block;
-	float: right;
 	margin-right: 3rem;
-	font-size: 3rem;
+	mask-image: url('/assets/images/icons/angle-left.svg');
+	mask-size: 20px;
+	mask-position: center;
+	mask-repeat: no-repeat;
+	padding: 2rem;
 	transition: transform $article-expansion-speed linear;
 
-	&:after {
-		background-color: darken($article-heading-background-color, 3%);
-		border-radius: 5rem;
-		color: #979cb5;
-		content: '<';
-		padding: 0 0.7rem;
+	&.caret--down {
+		transform: rotate(-90deg);
 	}
-}
-
-.article--visible {
-	transform: rotate(-90deg);
 }
