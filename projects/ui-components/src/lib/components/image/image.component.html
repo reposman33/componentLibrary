@@ -1,1 +1,13 @@
-<p>image works!</p>
+<div [ngClass]="containerClass">
+	<img
+		[src]="imageUrl"
+		[alt]="alt"
+		[title]="alt"
+		[ngClass]="imageClass"
+		(click)="expandImage()"
+	/>
+
+	<figure class="image__figure">
+		{{ caption }}
+	</figure>
+</div>

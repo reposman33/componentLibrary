@@ -1,0 +1,35 @@
+.container,
+.container__expanded {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	transition: width 1s ease-in-out;
+	width: 9rem;
+
+	&.container__expanded {
+		width: 45rem;
+	}
+}
+
+.image__expanded,
+.image__thumbnail {
+	box-shadow: 2px 2px 5px 0 #ccc;
+	margin-bottom: 0.5rem;
+	transition: width 1s ease-in-out;
+	width: 9rem;
+}
+
+.image__expanded {
+	width: 45rem;
+}
+
+.image__figure {
+	font-style: italic;
+	color: #333;
+	margin: 0;
+	width: max-content;
+}
+
+.image--cursorPointer {
+	cursor: pointer;
+}

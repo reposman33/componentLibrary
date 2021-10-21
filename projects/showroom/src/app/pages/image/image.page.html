@@ -3,6 +3,34 @@
 <div class="component-section">
 	<h3>This is an image</h3>
 	<div class="component">
-		<lib-image></lib-image>
+		<lib-image
+			imageUrl="/assets/images/wheresmydoggybag.jpg"
+			alt="Dog sitting at table behind empty plate"
+			[expand]="false"
+		></lib-image>
+	</div>
+</div>
+
+<div class="component-section">
+	<h3>This is an image with caption</h3>
+	<div class="component">
+		<lib-image
+			imageUrl="/assets/images/wheresmydoggybag.jpg"
+			alt="Dog sitting at table behind empty plate"
+			caption="Where is my doggy bag??!"
+			[expand]="false"
+		></lib-image>
+	</div>
+</div>
+
+<div class="component-section">
+	<h3>This is an expandable image with caption</h3>
+	<div class="component">
+		<lib-image
+			imageUrl="/assets/images/cow.jpg"
+			alt="Cow staring in camera from nearby"
+			caption="This is really in your face"
+			[expand]="true"
+		></lib-image>
 	</div>
 </div>
