@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-text',
-  templateUrl: './text.component.html',
-  styleUrls: ['./text.component.scss']
+	selector: 'lib-text',
+	templateUrl: './text.component.html',
+	styleUrls: ['./text.component.scss'],
 })
 export class TextComponent implements OnInit {
+	@Input() title: string = '';
+	@Input() subTitle: string = '';
 
-  constructor() { }
+	public titleSeparator: string = '|';
 
-  ngOnInit(): void {
-  }
+	constructor() {}
 
+	ngOnInit(): void {}
 }

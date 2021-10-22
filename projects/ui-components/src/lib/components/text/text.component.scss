@@ -1,0 +1,39 @@
+$text__content--background-color: #f0f1f5;
+
+.text__container {
+	background-color: $text__content--background-color;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	box-shadow: 5px 10px 10px 1.5px #efefef;
+	overflow-x: hidden;
+	padding: 0 1rem;
+	width: 50%;
+}
+
+.text__header {
+	align-items: baseline;
+	background-color: steelblue;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	color: white;
+	display: flex;
+	margin-left: -1rem;
+	padding: 1rem 1rem 0.5rem;
+	width: 105%;
+}
+
+.text__title-separator {
+	font-size: 1.5rem;
+	margin: 0 1rem;
+}
+
+.text__subtitle {
+	font-size: 1.25rem;
+	font-weight: 400;
+	line-height: 2rem;
+}
+
+.text__title {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
