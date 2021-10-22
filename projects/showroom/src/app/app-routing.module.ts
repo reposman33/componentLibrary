@@ -12,6 +12,7 @@ import { LogoComponent } from './pages/logo/logo.component';
 import { TabGroupPage } from './pages/tab-group/tab-group.page';
 import { ArticlePage } from './pages/article/article.page';
 import { ImagePage } from './pages/image/image.page';
+import { TextPage } from './pages/text/text.page';
 
 const routes: Routes = [
 	{
@@ -24,6 +25,7 @@ const routes: Routes = [
 			{ path: 'image', component: ImagePage },
 			{ path: 'logo', component: LogoComponent },
 			{ path: 'tabgroup', component: TabGroupPage },
+			{ path: 'text', component: TextPage },
 		],
 	},
 ];

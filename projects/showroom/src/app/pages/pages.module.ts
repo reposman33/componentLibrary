@@ -7,15 +7,24 @@ import {
 	ImageModule,
 	LogoModule,
 	TabGroupModule,
+	TextModule,
 } from '@ui-components/lib';
 import { HeaderPage } from './header/header.page';
 import { LogoComponent } from './logo/logo.component';
 import { TabGroupPage } from './tab-group/tab-group.page';
 import { ArticlePage } from './article/article.page';
 import { ImagePage } from './image/image.page';
+import { TextPage } from './text/text.page';
 
 @NgModule({
-	declarations: [HeaderPage, LogoComponent, TabGroupPage, ArticlePage, ImagePage],
+	declarations: [
+		HeaderPage,
+		LogoComponent,
+		TabGroupPage,
+		ArticlePage,
+		ImagePage,
+		TextPage,
+	],
 	exports: [],
 	imports: [
 		ArticleModule,
@@ -25,6 +34,7 @@ import { ImagePage } from './image/image.page';
 		LogoModule,
 		RouterModule,
 		TabGroupModule,
+		TextModule,
 	],
 })
 export class PagesModule {}

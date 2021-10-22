@@ -13,5 +13,6 @@ export class LayoutComponent {
 		{ title: 'Image', url: 'image' },
 		{ title: 'Logo', url: 'logo' },
 		{ title: 'Tabgroup', url: 'tabgroup' },
+		{ title: 'Text', url: 'text' },
 	];
 }
