@@ -1,7 +1,9 @@
 @import '../pages.scss';
 
-.text__image--float-left {
+.image-container {
 	float: left;
+	height: 5rem;
 	margin-right: 1rem;
-	width: fit-content;
+	margin-bottom: 1rem;
+	width: 9rem;
 }

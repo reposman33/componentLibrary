@@ -1,22 +1,13 @@
-.container,
-.container__expanded {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	transition: width 1s ease-in-out;
-	width: 9rem;
-
-	&.container__expanded {
-		width: 45rem;
-	}
+.container {
+	position: relative;
 }
 
 .image__expanded,
 .image__thumbnail {
 	box-shadow: 2px 2px 5px 0 #ccc;
-	margin-bottom: 0.5rem;
 	transition: width 1s ease-in-out;
 	width: 9rem;
+	z-index: 1000;
 }
 
 .image__expanded {
@@ -25,7 +16,7 @@
 
 .image__figure {
 	font-style: italic;
-	color: #333;
+	color: #5988d1;
 	margin: 0;
 	width: max-content;
 }
