@@ -9,7 +9,7 @@
 	<span class="logo">
 		<ng-content select="[slot=logo]"></ng-content>
 	</span>
-	<span class="title">{{ title }}</span>
-	<span class="separator">{{ subTitle.length > 0 ? separator : '' }}</span>
-	<span class="subtitle">{{ subTitle }}</span>
+	<span class="header__title">{{ title }}</span>
+	<span class="header__title-separator">{{ subTitle.length > 0 ? separator : '' }}</span>
+	<span class="header__subtitle">{{ subTitle }}</span>
 </div>
