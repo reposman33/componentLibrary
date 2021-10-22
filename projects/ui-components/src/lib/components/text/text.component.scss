@@ -2,11 +2,11 @@ $text__content--background-color: #f0f1f5;
 
 .text__container {
 	background-color: $text__content--background-color;
+	border: 1px solid #ddd;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	box-shadow: 5px 10px 10px 1.5px #efefef;
-	overflow-x: hidden;
-	padding: 0 1rem;
+	padding: 0.1rem 1rem;
 	width: 50%;
 }
 
@@ -17,6 +17,7 @@ $text__content--background-color: #f0f1f5;
 	border-top-right-radius: 15px;
 	color: white;
 	display: flex;
+	margin-bottom: 1rem;
 	margin-left: -1rem;
 	padding: 1rem 1rem 0.5rem;
 	width: 105%;
