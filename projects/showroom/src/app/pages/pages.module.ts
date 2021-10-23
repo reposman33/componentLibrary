@@ -15,6 +15,7 @@ import { TabGroupPage } from './tab-group/tab-group.page';
 import { ArticlePage } from './article/article.page';
 import { ImagePage } from './image/image.page';
 import { TextPage } from './text/text.page';
+import { DemoComponentsModule } from '../components/components.module';
 
 @NgModule({
 	declarations: [
@@ -25,8 +26,8 @@ import { TextPage } from './text/text.page';
 		ImagePage,
 		TextPage,
 	],
-	exports: [],
 	imports: [
+		DemoComponentsModule,
 		ArticleModule,
 		CommonModule,
 		HeaderModule,

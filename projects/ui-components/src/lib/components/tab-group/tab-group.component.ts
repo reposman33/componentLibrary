@@ -1,11 +1,6 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { ApiService } from '@api-modules';
-import { Observable, Observer } from 'rxjs';
-import { Tab } from '@ui-components/models/Tab';
+import { Component, Input, OnInit } from '@angular/core';
+import { Tab } from '../../../models/Tab';
 
-type Data = {
-	data: string;
-};
 @Component({
 	selector: 'lib-tab-group',
 	templateUrl: './tab-group.component.html',

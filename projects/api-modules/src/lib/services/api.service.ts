@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
-import { from, Observable, pipe, Subscription } from 'rxjs';
-import { catchError, tap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 const LOCAL_ASSETS_HTML = 'assets/sections';
-const LOCAL_ASSETS_IMAGES = 'assets/images';
 
 @Injectable({
 	providedIn: 'root',
