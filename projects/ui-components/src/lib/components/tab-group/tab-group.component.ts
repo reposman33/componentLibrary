@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Tab } from '../../../models/Tab';
+import { Tab } from '@ui-components';
 
 @Component({
 	selector: 'lib-tab-group',

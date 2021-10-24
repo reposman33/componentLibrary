@@ -8,7 +8,7 @@ import {
 	LogoModule,
 	TabGroupModule,
 	TextModule,
-} from '@ui-components/lib';
+} from '@ui-components';
 import { HeaderPage } from './header/header.page';
 import { LogoComponent } from './logo/logo.component';
 import { TabGroupPage } from './tab-group/tab-group.page';
