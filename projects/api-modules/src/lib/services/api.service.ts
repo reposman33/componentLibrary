@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 const LOCAL_ASSETS_HTML = 'assets/sections';
@@ -10,18 +10,19 @@ const LOCAL_ASSETS_HTML = 'assets/sections';
 export class ApiService {
 	constructor(private http: HttpClient) {}
 
-	getJson(url: string): Observable<HttpResponse<any>> {
+	getJson<T>(url: string): Observable<T> {
 		return this.get(url, new HttpHeaders({ Accept: 'application/json' }));
 	}
 
-	getJsonP(url: string): Observable<any> {
+	getJsonP<T>(url: string): Observable<Object> {
 		return this.http.jsonp(url, 'callback');
 	}
 
-	getHtml(url: string) {
+	getHtml(url: string): Observable<string> {
 		return this.http.get(url, { responseType: 'text' });
 	}
 
+	// get the HTML from a local file eg. myHtml.html
 	getHtmlSection(section: string): Observable<string> {
 		return this.getHtml(`${LOCAL_ASSETS_HTML}/${section}.html`);
 	}
