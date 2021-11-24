@@ -1,70 +1,80 @@
 $article-heading-background-color: #cfd3dd;
-$article-expansion-speed: 0.5s;
+$article-expansion-speed: 1s;
+$article__header--color: rgb(68, 64, 64);
+$article__header--background-color: #f1f6f7;
 
 .article {
-	align-items: flex-start;
-	background-color: white;
-	border: 3px inset #eeeef238;
-	border-radius: 15px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	overflow-x: hidden;
-	padding: 1rem;
+  border: 1px solid #dedede;
+  border-radius: 15px;
+  overflow-x: hidden;
+  padding: 0 1rem;
 }
 
 .article__header {
-	align-items: baseline;
-	background-color: $article-heading-background-color;
-	border-bottom: 1px solid #ccc;
-	display: flex;
-	justify-content: flex-start;
-	margin-left: -1rem;
-	padding: 0.8rem 1rem;
-	width: 105%;
+  background-color: $article__header--background-color;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -1rem;
+  padding: 0.8rem 1rem;
+  width: 105%;
 }
 
 .article__title {
-	font-size: 2rem;
-	font-weight: 600;
-	flex-grow: 1;
-	color: rgb(68, 64, 64);
-	border-right: 2px solid #aaa;
+  font-size: 1.8rem;
+  flex-grow: 1;
+  color: $article__header--color;
 }
 
 .article__subTitle {
-	color: #444;
-	flex-grow: 7;
-	font-size: 1.8rem;
-	padding-left: 5rem;
+  color: $article__header--color;
+  border-left: 2px solid #aaa;
+  border-color: #ccc;
+  flex-grow: 7;
+  font-size: 1.8rem;
+  padding-left: 5rem;
 }
 
 .article__content--expanded,
 .article__content {
-	display: block;
-	font-size: 1.3rem;
-	height: 3rem;
-	overflow-y: hidden;
-	transition: height $article-expansion-speed ease-in-out;
+  color: #ccc;
+  display: block;
+  font-size: 1.3rem;
+  max-height: 3rem;
+  overflow-y: hidden;
+  padding: 1rem;
+  transition: max-height $article-expansion-speed ease-in-out,
+    color $article-expansion-speed ease-in-out;
 }
 
 .article__content--expanded {
-	height: 20rem;
+  color: #000;
+  max-height: 10rem;
 }
 
 .caret--left,
 .caret--down {
-	background-color: darken($article-heading-background-color, 20%);
-	cursor: pointer;
-	margin-right: 3rem;
-	mask-image: url('/assets/images/icons/angle-left.svg');
-	mask-size: 20px;
-	mask-position: center;
-	mask-repeat: no-repeat;
-	padding: 2rem;
-	transition: transform $article-expansion-speed linear;
+  background-color: darken($article-heading-background-color, 20%);
+  cursor: pointer;
+  margin-right: 4rem;
+  mask-image: url("/assets/images/icons/angle-left.svg");
+  mask-size: 20px;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  padding: 0 2rem 2rem 2rem;
+  transition: transform $article-expansion-speed linear;
 
-	&.caret--down {
-		transform: rotate(-90deg);
-	}
+  &.caret--down {
+    transform: rotate(-90deg);
+  }
+}
+
+.article__content-header {
+  font-style: italic;
+}
+.article__content-body {
+  margin: 1rem 0;
+}
+.article__content-footer {
+  font-style: italic;
 }

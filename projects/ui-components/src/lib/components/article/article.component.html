@@ -1,33 +1,26 @@
 <div class="article">
-	<div class="article__header">
-		<div class="article__title">{{ title }}</div>
-		<div class="article__subTitle">{{ subTitle }}</div>
-		<span
-			[ngClass]="drawerOpen ? 'caret--down' : 'caret--left'"
-			(click)="drawerOpen = !drawerOpen"
-		></span>
-	</div>
+  <div class="article__header">
+    <div class="article__title">{{ title }}</div>
+    <div *ngIf="subTitle.length > 0" class="article__subTitle">
+      {{ subTitle }}
+    </div>
+    <span
+      [ngClass]="drawerOpen ? 'caret--down' : 'caret--left'"
+      (click)="drawerOpen = !drawerOpen"
+    ></span>
+  </div>
 
-	<div [ngClass]="drawerOpen ? 'article__content--expanded' : 'article__content'">
-		<p>
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione mollitia optio
-			molestiae deserunt quis, quae provident eligendi hic eveniet odit officiis
-			recusandae veniam minus. Odio inventore doloribus vel rerum cum?
-		</p>
-		<p>
-			Suscipit velit incidunt quisquam quos aliquid numquam harum in atque hic debitis?
-			Voluptatum, debitis magnam autem labore inventore numquam nobis in quae quidem
-			commodi, quis enim ex natus explicabo! Eaque.
-		</p>
-		<p>
-			Optio aliquid necessitatibus minus nesciunt fugit voluptas deserunt quae autem
-			doloribus? Esse, repudiandae beatae maxime facere necessitatibus expedita quo labore
-			quam et a odio neque mollitia quis vero officiis porro?
-		</p>
-		<p>
-			Facilis quaerat asperiores velit possimus? Esse consequuntur excepturi quis,
-			suscipit itaque molestias odio quasi corporis dolor unde doloribus praesentium culpa
-			numquam tempora libero ipsum inventore ducimus beatae? Neque, molestias explicabo!
-		</p>
-	</div>
+  <div
+    [ngClass]="drawerOpen ? 'article__content--expanded' : 'article__content'"
+  >
+    <div class="article__content-header">
+      <ng-content select="[slot=header]"></ng-content>
+    </div>
+    <div class="article__content-body">
+      <ng-content select="[slot=body]"></ng-content>
+    </div>
+    <div class="article__content-footer">
+      <ng-content select="[slot=footer]"></ng-content>
+    </div>
+  </div>
 </div>
