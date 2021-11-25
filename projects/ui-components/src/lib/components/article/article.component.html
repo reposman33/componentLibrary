@@ -13,14 +13,18 @@
   <div
     [ngClass]="drawerOpen ? 'article__content--expanded' : 'article__content'"
   >
-    <div class="article__content-header">
-      <ng-content select="[slot=header]"></ng-content>
+    <div #header>
+      <div *ngIf="hasHeader" class="article__content-header">
+        <ng-content select="[slot=header]"></ng-content>
+      </div>
     </div>
     <div class="article__content-body">
       <ng-content select="[slot=body]"></ng-content>
     </div>
-    <div class="article__content-footer">
-      <ng-content select="[slot=footer]"></ng-content>
+    <div #footer>
+      <div *ngIf="hasFooter" class="article__content-footer">
+        <ng-content select="[slot=footer]"></ng-content>
+      </div>
     </div>
   </div>
 </div>
