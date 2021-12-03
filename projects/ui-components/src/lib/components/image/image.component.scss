@@ -1,28 +1,35 @@
 .container {
-	height: 9rem;
-	margin-left: 1rem;
-	position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 9rem;
+  justify-content: center;
 }
 
 .image__expanded,
 .image__thumbnail {
-	box-shadow: 2px 2px 5px 0 #ccc;
-	transition: width 1s ease-in-out;
-	width: 9rem;
-	z-index: 1000;
+  box-shadow: 2px 2px 5px 0 #ccc;
+  transition: transform 1s ease-in-out;
+  transform: scale(1);
+  width: 5rem;
 }
 
 .image__expanded {
-	width: 45rem;
+  transform: scale(10);
+  // width: 45rem;
+  z-index: 1000;
 }
 
 .image__figure {
-	font-style: italic;
-	color: #5988d1;
-	margin: 0;
-	width: max-content;
+  font-style: italic;
+  background-color: grey;
+  border-radius: 50px;
+  color: #eee;
+  margin: 1rem;
+  padding: 0.2rem 0.7rem;
+  width: max-content;
 }
 
 .image--cursorPointer {
-	cursor: pointer;
+  cursor: pointer;
 }
