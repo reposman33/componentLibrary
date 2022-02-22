@@ -1,5 +1,5 @@
 $article-heading-background-color: #cfd3dd;
-$article-expansion-speed: 1s;
+$article-expansion-speed: 0.5s;
 $article__header--color: rgb(68, 64, 64);
 $article__header--background-color: #f1f6f7;
 
@@ -40,7 +40,7 @@ $article__header--background-color: #f1f6f7;
   color: #ccc;
   display: block;
   font-size: 1.3rem;
-  max-height: 3rem;
+  max-height: 2rem;
   overflow-y: hidden;
   padding: 1rem;
   transition: max-height $article-expansion-speed ease-in-out,
@@ -49,7 +49,7 @@ $article__header--background-color: #f1f6f7;
 
 .article__content--expanded {
   color: #000;
-  max-height: 10rem;
+  max-height: max-content;
 }
 
 .caret--left,
