@@ -1,15 +1,23 @@
 import { Component } from '@angular/core';
-import { environment } from '../environments/environment';
+import { ApiService } from '../../../api-modules/src/lib/services/api.service';
+import { Observable, Subscription } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
-	selector: 'app-root',
-	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.scss'],
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-	title = 'webapp';
+  title = 'webapp';
+  aboutText$!: object;
 
-	constructor() {
-		console.log(environment);
-	}
+  constructor(private apiService: ApiService) {}
+
+  ngOnInit() {
+    this.apiService.getCMSContent('about', 'nl').subscribe(
+      (res) => (this.aboutText$ = res),
+      (err) => console.error('ERROR: ', err)
+    );
+  }
 }

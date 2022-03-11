@@ -1,0 +1,30 @@
+.container {
+  align-items: baseline;
+  background-color: green;
+  display: grid;
+  gap: 3rem;
+  grid-template-rows: repeat(2, fr);
+  grid-template-columns: repeat(3, fr);
+  grid-template-areas:
+    "logo1 logo2 logo3"
+    "content content content";
+  padding: 1rem;
+  width: 100%;
+
+  .logo1,
+  .logo2,
+  .logo3 {
+    justify-content: center;
+    vertical-align: baseline;
+    display: grid;
+  }
+  .logo1 {
+    grid-area: logo1;
+  }
+  .logo2 {
+    grid-area: logo2;
+  }
+  .logo3 {
+    grid-area: logo3;
+  }
+}

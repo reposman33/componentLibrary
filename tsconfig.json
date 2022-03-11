@@ -1,31 +1,32 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-	"compileOnSave": false,
-	"compilerOptions": {
-		"paths": {
-			"@api-modules": ["projects/api-modules/src"],
-			"@ui-components": ["projects/ui-components/src"]
-		},
-		"baseUrl": "./",
-		"outDir": "./dist/out-tsc",
-		"forceConsistentCasingInFileNames": true,
-		"strict": true,
-		"noImplicitReturns": true,
-		"noFallthroughCasesInSwitch": true,
-		"sourceMap": true,
-		"declaration": false,
-		"downlevelIteration": true,
-		"experimentalDecorators": true,
-		"moduleResolution": "node",
-		"importHelpers": true,
-		"target": "es2017",
-		"module": "es2020",
-		"lib": ["es2018", "dom"]
-	},
-	"angularCompilerOptions": {
-		"enableI18nLegacyMessageIdFormat": false,
-		"strictInjectionParameters": true,
-		"strictInputAccessModifiers": true,
-		"strictTemplates": true
-	}
+  "compileOnSave": false,
+  "compilerOptions": {
+    "paths": {
+      "@api-modules": ["projects/api-modules/src/lib/services"],
+      "@ui-components": ["projects/ui-components/src"]
+    },
+    "baseUrl": "./",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist/out-tsc",
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2017",
+    "module": "es2020",
+    "lib": ["es2018", "dom"]
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
 }
