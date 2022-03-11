@@ -5,3 +5,4 @@ export * from './logo';
 export * from './tab-group';
 export * from './tab';
 export * from './text';
+export * from './toggle';
