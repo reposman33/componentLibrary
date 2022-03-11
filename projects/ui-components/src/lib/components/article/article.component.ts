@@ -14,15 +14,8 @@ type Todo = {
 export class ArticleComponent implements OnInit {
   @Input() title: string = '';
   @Input() subTitle: string = '';
-  @ViewChild('header', { read: ElementRef, static: true }) header!: ElementRef;
-  @ViewChild('footer', { read: ElementRef, static: true }) footer!: ElementRef;
 
   public drawerOpen: boolean = false;
-  public hasHeader: boolean = false;
-  public hasFooter: boolean = false;
 
-  ngOnInit(): void {
-    this.hasHeader = this.header.nativeElement.hasChildNodes();
-    this.hasFooter = this.footer.nativeElement.hasChildNodes();
-  }
+  ngOnInit(): void {}
 }
