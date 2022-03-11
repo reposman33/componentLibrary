@@ -1,7 +1,7 @@
 <h2>This is the page containing the Article component</h2>
 
 <div class="component-section">
-  <h3>This is an expandable article with only text.</h3>
+  <h3>This is an article with only text.</h3>
   <div class="component">
     <lib-article>
       <p slot="body">
@@ -19,7 +19,11 @@
     This is an expandable article containing a title, a subtitle and the text.
   </h3>
   <div class="component">
-    <lib-article title="This is the title" subTitle="This is the subtitle">
+    <lib-article
+      title="This is the title"
+      subTitle="This is the subtitle"
+      [toggle]="true"
+    >
       <p slot="body">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, soluta,
         accusamus officiis itaque at officia animi excepturi temporibus
@@ -36,7 +40,11 @@
     footer.
   </h3>
   <div class="component">
-    <lib-article title="This is the title" subTitle="This is the subtitle">
+    <lib-article
+      title="This is the title"
+      subTitle="This is the subtitle"
+      [toggle]="true"
+    >
       <p slot="body">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, soluta,
         accusamus officiis itaque at officia animi excepturi temporibus

@@ -52,23 +52,6 @@ $article__header--background-color: #f1f6f7;
   max-height: max-content;
 }
 
-.caret--left,
-.caret--down {
-  background-color: darken($article-heading-background-color, 20%);
-  cursor: pointer;
-  margin-right: 4rem;
-  mask-image: url("/assets/images/icons/angle-left.svg");
-  mask-size: 20px;
-  mask-position: center;
-  mask-repeat: no-repeat;
-  padding: 0 2rem 2rem 2rem;
-  transition: transform $article-expansion-speed linear;
-
-  &.caret--down {
-    transform: rotate(-90deg);
-  }
-}
-
 .article__content-header {
   font-style: italic;
 }

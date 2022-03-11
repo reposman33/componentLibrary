@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 type Todo = {
   userId: number;
@@ -12,8 +12,9 @@ type Todo = {
   styleUrls: ['./article.component.scss'],
 })
 export class ArticleComponent implements OnInit {
-  @Input() title: string = '';
   @Input() subTitle: string = '';
+  @Input() title: string = '';
+  @Input() toggle: boolean = false;
 
   public drawerOpen: boolean = false;
 

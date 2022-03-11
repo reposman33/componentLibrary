@@ -4,13 +4,12 @@
     <div *ngIf="subTitle.length > 0" class="article__subTitle">
       {{ subTitle }}
     </div>
-    <span
-      [ngClass]="drawerOpen ? 'caret--down' : 'caret--left'"
-      (click)="drawerOpen = !drawerOpen"
-    ></span>
+    <lib-toggle *ngIf="toggle" (click)="drawerOpen = !drawerOpen"></lib-toggle>
   </div>
   <div
-    [ngClass]="drawerOpen ? 'article__content--expanded' : 'article__content'"
+    [ngClass]="
+      drawerOpen || !toggle ? 'article__content--expanded' : 'article__content'
+    "
   >
     <div #header>
       <div class="article__content-header">
