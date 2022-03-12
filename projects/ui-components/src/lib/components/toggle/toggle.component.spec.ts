@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { ToggleComponent } from './toggle.component';
 
@@ -8,9 +9,8 @@ describe('ToggleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ToggleComponent ]
-    })
-    .compileComponents();
+      declarations: [ToggleComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -21,5 +21,27 @@ describe('ToggleComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('changes class when clicked open', () => {
+    const element = fixture.debugElement.query(By.css('span'));
+    element.triggerEventHandler('click', null);
+    fixture.detectChanges();
+
+    console.info(element.nativeElement.className);
+    expect(element.nativeElement.className).toContain('caret--down');
+  });
+
+  it('changes class when clicked closed', () => {
+    const element = fixture.debugElement.query(By.css('span'));
+    // click once to open
+    element.triggerEventHandler('click', null);
+    fixture.detectChanges();
+    // click again to close
+    element.triggerEventHandler('click', null);
+    fixture.detectChanges();
+
+    console.info(element.nativeElement.className);
+    expect(element.nativeElement.className).toContain('caret--left');
   });
 });
