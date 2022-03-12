@@ -13,26 +13,28 @@ import { TabGroupPage } from './pages/tab-group/tab-group.page';
 import { ArticlePage } from './pages/article/article.page';
 import { ImagePage } from './pages/image/image.page';
 import { TextPage } from './pages/text/text.page';
+import { TogglePage } from './pages/toggle/toggle.page';
 
 const routes: Routes = [
-	{
-		path: '',
-		component: LayoutComponent,
-		children: [
-			{ path: '', pathMatch: 'full', component: LandingComponent },
-			{ path: 'article', component: ArticlePage },
-			{ path: 'header', component: HeaderPage },
-			{ path: 'image', component: ImagePage },
-			{ path: 'logo', component: LogoComponent },
-			{ path: 'tabgroup', component: TabGroupPage },
-			{ path: 'text', component: TextPage },
-		],
-	},
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      { path: '', pathMatch: 'full', component: LandingComponent },
+      { path: 'article', component: ArticlePage },
+      { path: 'header', component: HeaderPage },
+      { path: 'image', component: ImagePage },
+      { path: 'logo', component: LogoComponent },
+      { path: 'tabgroup', component: TabGroupPage },
+      { path: 'text', component: TextPage },
+      { path: 'toggle', component: TogglePage },
+    ],
+  },
 ];
 
 @NgModule({
-	declarations: [],
-	imports: [LayoutModule, PagesModule, RouterModule.forRoot(routes)],
-	exports: [LayoutModule],
+  declarations: [],
+  imports: [LayoutModule, PagesModule, RouterModule.forRoot(routes)],
+  exports: [LayoutModule],
 })
 export class AppRoutingModule {}
