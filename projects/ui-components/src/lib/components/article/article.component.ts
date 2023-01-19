@@ -1,11 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-type Todo = {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
-};
 @Component({
   selector: 'lib-article',
   templateUrl: './article.component.html',
