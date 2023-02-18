@@ -1,0 +1,28 @@
+.page__content-container {
+  background-color: snow;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.icon {
+  display: flex;
+  justify-content: flex-end;
+
+  span {
+    padding: 3px;
+
+    &:hover {
+      background-color: lightgrey;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    &:first-of-type {
+      margin-right: 1rem;
+    }
+
+    &:last-of-type {
+      margin-left: 2rem;
+    }
+  }
+}
