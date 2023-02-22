@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { displayMode } from '../../models/Types';
 import { CommunicationService } from '../../services/communication.service';
+import { FileService } from '../../services/file.service';
 
 @Component({
   selector: 'page-header',
@@ -9,13 +9,23 @@ import { CommunicationService } from '../../services/communication.service';
 })
 export class HeaderPage {
   code = '';
+  htmlFilePath = 'header/header.component.html';
   displayCode: boolean = false;
   displayComponent: boolean = true;
 
-  constructor(private communicationService: CommunicationService) {
-    this.communicationService.getMessage().subscribe((viewMode) => {
+  constructor(
+    private _communicationService: CommunicationService,
+    private _fileService: FileService
+  ) {
+    this._communicationService.getMessage().subscribe((viewMode) => {
       this.displayCode = viewMode.mode === 'code';
       this.displayComponent = viewMode.mode === 'component';
     });
+  }
+
+  ngAfterViewInit() {
+    this._fileService
+      .readFile(this.htmlFilePath)
+      .then((data) => (this.code = data));
   }
 }
