@@ -12,9 +12,27 @@
   </ng-container>
 
   <div class="page__content-container">
-    <div class="icon">
-      <span class="material-symbols-outlined"> visibility </span>
-      <span class="material-symbols-outlined"> code </span>
+    <div class="icons">
+      <span
+        [ngClass]="{
+          'material-symbols-outlined': true,
+          'icon--selected': pageViewMode === 'component'
+        }"
+        component
+        (click)="setPageViewMode('component')"
+      >
+        visibility
+      </span>
+      <span
+        [ngClass]="{
+          'material-symbols-outlined': true,
+          'icon--selected': pageViewMode === 'code'
+        }"
+        code
+        (click)="setPageViewMode('code')"
+      >
+        code
+      </span>
     </div>
     <router-outlet></router-outlet>
   </div>

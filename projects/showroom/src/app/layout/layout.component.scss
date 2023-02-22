@@ -4,21 +4,29 @@
   border-radius: 1rem;
   padding: 2rem;
 }
-.icon {
+
+.icons {
   display: flex;
   justify-content: flex-end;
+  padding: 3px;
 
-  span {
-    padding: 3px;
+  & span {
+    padding: 0.5rem;
 
-    &:hover {
+    &:hover,
+    &.icon--selected {
       background-color: lightgrey;
       border-radius: 8px;
       cursor: pointer;
     }
 
+    &.icon--selected {
+      background-color: #425b77;
+      color: white;
+    }
+
     &:first-of-type {
-      margin-right: 1rem;
+      margin-right: 2rem;
     }
 
     &:last-of-type {
