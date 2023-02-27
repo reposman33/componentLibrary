@@ -18,6 +18,7 @@ import { ImagePage } from './image/image.page';
 import { TextPage } from './text/text.page';
 import { DemoComponentsModule } from '../components/components.module';
 import { TogglePage } from './toggle/toggle.page';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { TogglePage } from './toggle/toggle.page';
     ArticleModule,
     CommonModule,
     HeaderModule,
+    HttpClientModule,
     ImageModule,
     LogoModule,
     RouterModule,

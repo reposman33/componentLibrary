@@ -1,21 +1,21 @@
-import { Component } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import { CommunicationService } from '../../services/communication.service';
-import { FileService } from '../../services/file.service';
 
 @Component({
   selector: 'page-header',
   templateUrl: './header.page.html',
   styleUrls: ['./header.page.scss'],
 })
-export class HeaderPage {
-  code = '';
-  htmlFilePath = 'header/header.component.html';
+export class HeaderPage implements OnInit {
+  private url = 'https://localhost:4201/pages/header/header.page.html';
   displayCode: boolean = false;
   displayComponent: boolean = true;
+  httpHeaders = new HttpHeaders();
 
   constructor(
     private _communicationService: CommunicationService,
-    private _fileService: FileService
+    private http: HttpClient
   ) {
     this._communicationService.getMessage().subscribe((viewMode) => {
       this.displayCode = viewMode.mode === 'code';
@@ -23,9 +23,20 @@ export class HeaderPage {
     });
   }
 
-  ngAfterViewInit() {
-    this._fileService
-      .readFile(this.htmlFilePath)
-      .then((data) => (this.code = data));
+  ngOnInit() {
+    this.httpHeaders.set('Accept', '*/*');
+    this.http
+      .get(this.url, { headers: this.httpHeaders, responseType: 'text' })
+      .subscribe(
+        (response) => {
+          console.log('response = ', response);
+        },
+        (error) => {
+          console.log('ERROR: ', error);
+        },
+        () => {
+          console.log('complete');
+        }
+      );
   }
 }
