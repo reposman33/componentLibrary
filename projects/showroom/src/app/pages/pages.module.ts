@@ -19,6 +19,7 @@ import { TextPage } from './text/text.page';
 import { DemoComponentsModule } from '../components/components.module';
 import { TogglePage } from './toggle/toggle.page';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     DemoComponentsModule,
     ArticleModule,
     CommonModule,
+    FormsModule,
     HeaderModule,
     HttpClientModule,
     ImageModule,

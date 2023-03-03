@@ -8,10 +8,10 @@
 .icons {
   display: flex;
   justify-content: flex-end;
-  padding: 3px;
+  padding: 1px;
 
   & span {
-    padding: 0.5rem;
+    padding: 0.25rem;
 
     &:hover,
     &.icon--selected {
@@ -26,11 +26,11 @@
     }
 
     &:first-of-type {
-      margin-right: 2rem;
+      margin-right: 1rem;
     }
 
     &:last-of-type {
-      margin-left: 2rem;
+      margin-left: 1rem;
     }
   }
 }

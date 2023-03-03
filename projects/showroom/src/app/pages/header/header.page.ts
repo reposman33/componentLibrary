@@ -11,7 +11,9 @@ export class HeaderPage implements OnInit {
   private url = 'https://localhost:4201/pages/header/header.page.html';
   displayCode: boolean = false;
   displayComponent: boolean = true;
-  httpHeaders = new HttpHeaders();
+  input_title = '';
+  input_subTitle = '';
+  input_align = 'left' as Align;
 
   constructor(
     private _communicationService: CommunicationService,
