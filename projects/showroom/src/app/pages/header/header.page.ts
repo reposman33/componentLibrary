@@ -12,8 +12,8 @@ export class HeaderPage implements AfterViewInit {
   displayCode: boolean = false;
   displayComponent: boolean = true;
   code!: string | null;
-  input_title = '';
-  input_subTitle = '';
+  input_title = 'Moby Dick';
+  input_subTitle = 'een verhaal over moed en wanhoop';
   input_align = 'left' as Align;
 
   constructor(private _communicationService: CommunicationService) {
