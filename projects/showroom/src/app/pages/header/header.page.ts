@@ -1,5 +1,5 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { Align } from '@ui-components';
 import { CommunicationService } from '../../services/communication.service';
 
 @Component({
@@ -7,38 +7,24 @@ import { CommunicationService } from '../../services/communication.service';
   templateUrl: './header.page.html',
   styleUrls: ['./header.page.scss'],
 })
-export class HeaderPage implements OnInit {
-  private url = 'https://localhost:4201/pages/header/header.page.html';
+export class HeaderPage implements AfterViewInit {
+  @ViewChild('html', { read: ElementRef }) htmlRef!: ElementRef;
   displayCode: boolean = false;
   displayComponent: boolean = true;
+  code!: string | null;
   input_title = '';
   input_subTitle = '';
   input_align = 'left' as Align;
 
-  constructor(
-    private _communicationService: CommunicationService,
-    private http: HttpClient
-  ) {
+  constructor(private _communicationService: CommunicationService) {
     this._communicationService.getMessage().subscribe((viewMode) => {
       this.displayCode = viewMode.mode === 'code';
       this.displayComponent = viewMode.mode === 'component';
     });
   }
 
-  ngOnInit() {
-    this.httpHeaders.set('Accept', '*/*');
-    this.http
-      .get(this.url, { headers: this.httpHeaders, responseType: 'text' })
-      .subscribe(
-        (response) => {
-          console.log('response = ', response);
-        },
-        (error) => {
-          console.log('ERROR: ', error);
-        },
-        () => {
-          console.log('complete');
-        }
-      );
+  ngAfterViewInit() {
+    this.code = this.htmlRef.nativeElement.innerHTML;
+    console.log(this.code);
   }
 }

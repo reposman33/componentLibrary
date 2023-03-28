@@ -1,1 +1,49 @@
-@import '../pages.scss';
+@import "../pages.scss";
+
+.code {
+  background-color: black;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  white-space: pre;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.controls {
+  border: inherit;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0.5;
+  font-size: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+
+  & .row__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & input,
+    select {
+      margin: 1rem;
+      width: 60%;
+    }
+
+    & label {
+      align-self: center;
+      margin: 0 1rem;
+    }
+
+    & select {
+      align-self: center;
+      margin: 1rem auto;
+      width: 33%;
+    }
+  }
+}

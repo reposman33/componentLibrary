@@ -1,12 +1,8 @@
-<h2>This is the page containing the Header component</h2>
+<h2>Header component</h2>
 
 <ng-container *ngIf="displayComponent">
   <div class="component-section">
-    <h3>
-      This header component contains a title and a subtitle. The subtitle is
-      optional.
-    </h3>
-    <div class="component">
+    <div class="component" #html>
       <lib-header
         [align]="input_align"
         [title]="input_title"
@@ -17,12 +13,13 @@
   </div>
 </ng-container>
 
+<ng-container *ngIf="displayCode">
   <div class="component-section">
-    <h3>This is a header with a title but without a subtitle.</h3>
-    <div class="component">
-      <lib-header align="left" title="This is the title"> </lib-header>
+    <div class="component code">
+      <div [innerText]="code"></div>
     </div>
   </div>
+</ng-container>
 
 <div class="panel component-section">
   <div class="controls component">
