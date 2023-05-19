@@ -1,44 +1,46 @@
-<h2>Header component</h2>
+<div class="page--content">
+  <h2>Header component</h2>
 
-<ng-container *ngIf="displayComponent">
-  <div class="component-section">
-    <div class="component" #html>
-      <lib-header
-        [align]="input_align"
-        [title]="input_title"
-        [subTitle]="input_subTitle"
-      >
-      </lib-header>
+  <ng-container *ngIf="displayComponent">
+    <div class="component-section">
+      <div class="component" #html>
+        <lib-header
+          [align]="input_align"
+          [title]="input_title"
+          [subTitle]="input_subTitle"
+        >
+        </lib-header>
+      </div>
     </div>
-  </div>
-</ng-container>
+  </ng-container>
 
-<ng-container *ngIf="displayCode">
-  <div class="component-section">
-    <div class="component code">
-      <div [innerText]="code"></div>
+  <ng-container *ngIf="displayCode">
+    <div class="component-section">
+      <div class="component code">
+        <pre [innerText]="code"></pre>
+      </div>
     </div>
-  </div>
-</ng-container>
+  </ng-container>
 
-<div class="panel component-section">
-  <div class="controls component">
-    <div class="row__button">
-      <label for="title">title</label>
-      <input type="text" name="title" [(ngModel)]="input_title" />
-    </div>
-    <div class="row__button">
-      <label for="subTitle">subtitle</label
-      ><input type="text" name="subTitle" [(ngModel)]="input_subTitle" />
-    </div>
-    <div class="row__button">
-      <label for="align">align</label>
-      <select name="align" [(ngModel)]="input_align">
-        <option value="left">left</option>
-        <option value="center">center</option>
-        <option value="right">right</option>
-        <option value="around">around</option>
-      </select>
+  <div class="panel component-section">
+    <div class="controls component">
+      <div class="row__button">
+        <label for="title">title</label>
+        <input type="text" name="title" [(ngModel)]="input_title" />
+      </div>
+      <div class="row__button">
+        <label for="subTitle">subtitle</label
+        ><input type="text" name="subTitle" [(ngModel)]="input_subTitle" />
+      </div>
+      <div class="row__button">
+        <label for="align">align</label>
+        <select name="align" [(ngModel)]="input_align">
+          <option value="left">left</option>
+          <option value="center">center</option>
+          <option value="right">right</option>
+          <option value="around">around</option>
+        </select>
+      </div>
     </div>
   </div>
 </div>

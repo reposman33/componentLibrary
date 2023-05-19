@@ -1,49 +1,56 @@
 @import "../pages.scss";
 
-.code {
-  background-color: black;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  white-space: pre;
-}
-
-.panel {
+.page--content {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  justify-content: center;
-}
+  align-items: space-between;
 
-.controls {
-  border: inherit;
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 0.5;
-  font-size: 1.5rem;
-  justify-content: center;
-  margin-top: 1rem;
+  .code {
+    background-color: black;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    white-space: pre;
+  }
 
-  & .row__button {
+  .panel {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    margin: auto 0;
+  }
 
-    & input,
-    select {
-      margin: 1rem;
-      width: 60%;
-    }
+  .controls {
+    border: inherit;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    font-size: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
 
-    & label {
-      align-self: center;
-      margin: 0 1rem;
-    }
+    & .row__button {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
 
-    & select {
-      align-self: center;
-      margin: 1rem auto;
-      width: 33%;
+      & input,
+      select {
+        margin: 1rem;
+        width: 60%;
+      }
+
+      & label {
+        align-self: center;
+        margin: 0 1rem;
+      }
+
+      & select {
+        align-self: center;
+        margin: 1rem auto;
+        width: 33%;
+      }
     }
   }
 }

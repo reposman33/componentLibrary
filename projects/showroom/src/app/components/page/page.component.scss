@@ -21,7 +21,8 @@ nav.page__sidebar {
 }
 
 .page__content {
-	background-color: #fff;
-	flex-grow: 2;
-	padding: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-grow: 1;
+  padding: 1rem;
 }
