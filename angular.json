@@ -304,5 +304,7 @@
       }
     }
   },
-  "defaultProject": "showroom"
+  "cli": {
+    "analytics": "e7c07017-d191-42e3-ab22-893d9a4f5c59"
+  }
 }
