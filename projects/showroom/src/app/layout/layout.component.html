@@ -1,7 +1,7 @@
-<app-page>
-  <app-header header>Component Showroom</app-header>
+<app-header>Component Showroom</app-header>
 
-  <ng-container sidebar>
+<div class="layout__main-content">
+  <nav class="layout__sidebar">
     <h1>Componenten</h1>
 
     <app-nav-list>
@@ -9,31 +9,31 @@
         {{ link.title }}
       </app-nav-item>
     </app-nav-list>
-  </ng-container>
-
-  <div class="page__content-container">
-    <div class="icons">
-      <span
-        [ngClass]="{
-          'material-symbols-outlined': true,
-          'icon--selected': pageViewMode === 'component'
-        }"
-        component
-        (click)="setPageViewMode('component')"
-      >
-        visibility
-      </span>
-      <span
-        [ngClass]="{
-          'material-symbols-outlined': true,
-          'icon--selected': pageViewMode === 'code'
-        }"
-        code
-        (click)="setPageViewMode('code')"
-      >
-        code
-      </span>
-    </div>
-    <router-outlet></router-outlet>
-  </div>
-</app-page>
+  </nav>
+  
+  <app-page class="layout__page-content">
+      <div class="icons">
+        <span
+          [ngClass]="{
+            'material-symbols-outlined': true,
+            'icon--selected': pageViewMode === 'component'
+          }"
+          component
+          (click)="setPageViewMode('component')"
+        >
+          visibility
+        </span>
+        <span
+          [ngClass]="{
+            'material-symbols-outlined': true,
+            'icon--selected': pageViewMode === 'code'
+          }"
+          code
+          (click)="setPageViewMode('code')"
+        >
+          code
+        </span>
+      </div>
+      <router-outlet></router-outlet>
+  </app-page>
+</div>

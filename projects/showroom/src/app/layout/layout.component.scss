@@ -1,11 +1,9 @@
-.page__content-container {
-  background-color: snow;
-  border: 1px solid #ccc;
-  border-radius: 1rem;
+.layout__main-content {
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: 2rem;
+}
+
+.layout__page-content {
+  flex-grow: 100;
 }
 
 .icons {
@@ -36,4 +34,12 @@
       margin-left: 1rem;
     }
   }
+}
+nav.layout__sidebar {
+	background-color: rgb(219, 218, 134);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+  width: 25vw;
 }
