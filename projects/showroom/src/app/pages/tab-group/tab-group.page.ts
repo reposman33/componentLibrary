@@ -19,6 +19,10 @@ export class TabGroupPage implements OnInit {
 			title: 'Portfolio',
 			section: 'portfolio',
 		},
+		{
+			title: 'Links',
+			section: 'links',
+		},
 	];
 	constructor() {}
 
