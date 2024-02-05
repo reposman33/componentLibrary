@@ -1,6 +1,6 @@
 <app-header>Component Showroom</app-header>
 
-<div class="layout__main-content">
+<div *ngIf="isLoggedIn; else loginComponent" class="layout__main-content">
   <nav class="layout__sidebar">
     <h1>Componenten</h1>
 
@@ -37,3 +37,5 @@
       <router-outlet></router-outlet>
   </app-page>
 </div>
+
+<ng-template #loginComponent> <app-login></app-login> </ng-template>

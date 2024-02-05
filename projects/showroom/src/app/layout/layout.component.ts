@@ -11,6 +11,8 @@ import { CommunicationService } from '../services/communication.service';
 export class LayoutComponent implements OnInit {
   mode: displayMode = 'component';
 
+  isLoggedIn = false;
+
   public links: Link[] = [
     { title: 'Article', url: 'article' },
     { title: 'Header', url: 'header' },
