@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { Align } from '@ui-components';
+import { Align, HeaderComponent } from '@ui-components';
 import { CommunicationService } from '../../services/communication.service';
 
 @Component({
@@ -8,7 +8,13 @@ import { CommunicationService } from '../../services/communication.service';
   styleUrls: ['./header.page.scss'],
 })
 export class HeaderPage implements AfterViewInit {
-  @ViewChild('html', { read: ElementRef }) htmlRef!: ElementRef;
+  // @ViewChild('html',{read: HeaderComponent, static: true}) htmlRef!: HeaderComponent;
+  htmlRef = `        <lib-header
+          [align]="input_align"
+          [title]="input_title"
+          [subTitle]="input_subTitle"
+        >
+`;
   displayCode: boolean = false;
   displayComponent: boolean = true;
   code!: string | null;
@@ -24,7 +30,7 @@ export class HeaderPage implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.code = this.htmlRef.nativeElement.innerHTML;
+    this.code = this.htmlRef;
     console.log(this.code);
   }
 }
