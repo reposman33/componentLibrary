@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { Align, HeaderComponent } from '@ui-components';
+import { AfterViewInit, Component } from '@angular/core';
+import { Align } from '@ui-components';
 import { CommunicationService } from '../../services/communication.service';
 
 @Component({
