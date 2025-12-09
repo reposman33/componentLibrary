@@ -8,7 +8,6 @@ import { CommunicationService } from '../../services/communication.service';
   styleUrls: ['./header.page.scss'],
 })
 export class HeaderPage implements AfterViewInit {
-  // @ViewChild('html',{read: HeaderComponent, static: true}) htmlRef!: HeaderComponent;
   htmlRef = `        <lib-header
           [align]="input_align"
           [title]="input_title"
