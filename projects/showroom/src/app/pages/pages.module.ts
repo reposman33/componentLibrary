@@ -10,26 +10,26 @@ import {
   TextModule,
   ToggleModule,
 } from '@ui-components';
-import { HeaderPage } from './header/header.page';
+import { HeaderPageComponent } from './header/header.page';
 import { LogoComponent } from './logo/logo.component';
-import { TabGroupPage } from './tab-group/tab-group.page';
+import { TabGroupPageComponent } from './tab-group/tab-group.page';
 import { ArticlePageComponent } from './article/article.page';
-import { ImagePage } from './image/image.page';
-import { TextPage } from './text/text.page';
+import { ImagePageComponent } from './image/image.page';
+import { TextPageComponent } from './text/text.page';
 import { DemoComponentsModule } from '../components/components.module';
-import { TogglePage } from './toggle/toggle.page';
+import { TogglePageComponent } from './toggle/toggle.page';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    HeaderPage,
+    HeaderPageComponent,
     LogoComponent,
-    TabGroupPage,
+    TabGroupPageComponent,
     ArticlePageComponent,
-    ImagePage,
-    TextPage,
-    TogglePage,
+    ImagePageComponent,
+    TextPageComponent,
+    TogglePageComponent,
   ],
   imports: [
     DemoComponentsModule,

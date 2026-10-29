@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
 	templateUrl: './text.page.html',
 	styleUrls: ['./text.page.scss'],
 })
-export class TextPage {}
+export class TextPageComponent {}

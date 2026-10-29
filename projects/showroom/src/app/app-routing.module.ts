@@ -7,13 +7,13 @@ import { LayoutComponent } from './layout/layout.component';
 
 import { PagesModule } from './pages/pages.module';
 import { LandingComponent } from './pages/landing/landing.component';
-import { HeaderPage } from './pages/header/header.page';
+import { HeaderPageComponent } from './pages/header/header.page';
 import { LogoComponent } from './pages/logo/logo.component';
-import { TabGroupPage } from './pages/tab-group/tab-group.page';
+import { TabGroupPageComponent } from './pages/tab-group/tab-group.page';
 import { ArticlePageComponent } from './pages/article/article.page';
-import { ImagePage } from './pages/image/image.page';
-import { TextPage } from './pages/text/text.page';
-import { TogglePage } from './pages/toggle/toggle.page';
+import { ImagePageComponent } from './pages/image/image.page';
+import { TextPageComponent } from './pages/text/text.page';
+import { TogglePageComponent } from './pages/toggle/toggle.page';
 
 const routes: Routes = [
   {
@@ -22,12 +22,12 @@ const routes: Routes = [
     children: [
       { path: '', pathMatch: 'full', component: LandingComponent },
       { path: 'article', component: ArticlePageComponent },
-      { path: 'header', component: HeaderPage },
-      { path: 'image', component: ImagePage },
+      { path: 'header', component: HeaderPageComponent },
+      { path: 'image', component: ImagePageComponent },
       { path: 'logo', component: LogoComponent },
-      { path: 'tabgroup', component: TabGroupPage },
-      { path: 'text', component: TextPage },
-      { path: 'toggle', component: TogglePage },
+      { path: 'tabgroup', component: TabGroupPageComponent },
+      { path: 'text', component: TextPageComponent },
+      { path: 'toggle', component: TogglePageComponent },
     ],
   },
 ];

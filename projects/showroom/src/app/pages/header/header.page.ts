@@ -7,7 +7,7 @@ import { CommunicationService } from '../../services/communication.service';
   templateUrl: './header.page.html',
   styleUrls: ['./header.page.scss'],
 })
-export class HeaderPage implements AfterViewInit {
+export class HeaderPageComponent implements AfterViewInit {
   htmlRef = `        <lib-header
           [align]="input_align"
           [title]="input_title"

@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TabGroupPage } from './tab-group.page';
+import { TabGroupPageComponent } from './tab-group.page';
 
-describe('TabGroupPage', () => {
-	let component: TabGroupPage;
-	let fixture: ComponentFixture<TabGroupPage>;
+describe('TabGroupPageComponent', () => {
+	let component: TabGroupPageComponent;
+	let fixture: ComponentFixture<TabGroupPageComponent>;
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [TabGroupPage],
+			declarations: [TabGroupPageComponent],
 		}).compileComponents();
 	});
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(TabGroupPage);
+		fixture = TestBed.createComponent(TabGroupPageComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

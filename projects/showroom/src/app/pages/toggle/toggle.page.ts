@@ -5,11 +5,5 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './toggle.page.html',
   styleUrls: ['./toggle.page.scss']
 })
-export class TogglePage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class TogglePageComponent {
 }
