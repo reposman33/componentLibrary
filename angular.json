@@ -83,6 +83,12 @@
           },
           "defaultConfiguration": "development"
         },
+        "lint": {
+        "builder": "@angular-eslint/builder:lint",
+        "options": {
+          "lintFilePatterns": ["projects/showroom/src/**/*.ts", "projects/showroom/src/**/*.html"]
+        }
+        },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
@@ -306,6 +312,5 @@
         }
       }
     }
-  },
-  "defaultProject": "showroom"
+  }
 }
