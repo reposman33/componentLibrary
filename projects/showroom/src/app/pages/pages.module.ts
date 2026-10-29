@@ -13,7 +13,7 @@ import {
 import { HeaderPage } from './header/header.page';
 import { LogoComponent } from './logo/logo.component';
 import { TabGroupPage } from './tab-group/tab-group.page';
-import { ArticlePage } from './article/article.page';
+import { ArticlePageComponent } from './article/article.page';
 import { ImagePage } from './image/image.page';
 import { TextPage } from './text/text.page';
 import { DemoComponentsModule } from '../components/components.module';
@@ -26,7 +26,7 @@ import { FormsModule } from '@angular/forms';
     HeaderPage,
     LogoComponent,
     TabGroupPage,
-    ArticlePage,
+    ArticlePageComponent,
     ImagePage,
     TextPage,
     TogglePage,
