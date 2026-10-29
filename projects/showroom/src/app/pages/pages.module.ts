@@ -18,32 +18,26 @@ import { ImagePageComponent } from './image/image.page';
 import { TextPageComponent } from './text/text.page';
 import { DemoComponentsModule } from '../components/components.module';
 import { TogglePageComponent } from './toggle/toggle.page';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-@NgModule({
-  declarations: [
-    HeaderPageComponent,
-    LogoComponent,
-    TabGroupPageComponent,
-    ArticlePageComponent,
-    ImagePageComponent,
-    TextPageComponent,
-    TogglePageComponent,
-  ],
-  imports: [
-    DemoComponentsModule,
-    ArticleModule,
-    CommonModule,
-    FormsModule,
-    HeaderModule,
-    HttpClientModule,
-    ImageModule,
-    LogoModule,
-    RouterModule,
-    TabGroupModule,
-    TextModule,
-    ToggleModule,
-  ],
-})
+@NgModule({ declarations: [
+        HeaderPageComponent,
+        LogoComponent,
+        TabGroupPageComponent,
+        ArticlePageComponent,
+        ImagePageComponent,
+        TextPageComponent,
+        TogglePageComponent,
+    ], imports: [DemoComponentsModule,
+        ArticleModule,
+        CommonModule,
+        FormsModule,
+        HeaderModule,
+        ImageModule,
+        LogoModule,
+        RouterModule,
+        TabGroupModule,
+        TextModule,
+        ToggleModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class PagesModule {}

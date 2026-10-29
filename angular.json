@@ -21,12 +21,15 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/showroom",
+            "outputPath": {
+              "base": "dist/showroom"
+            },
             "index": "projects/showroom/src/index.html",
-            "main": "projects/showroom/src/main.ts",
-            "polyfills": "projects/showroom/src/polyfills.ts",
+            "polyfills": [
+              "projects/showroom/src/polyfills.ts"
+            ],
             "tsConfig": "projects/showroom/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -38,7 +41,8 @@
               "projects/ui-components/src/styles/normalize.css",
               "projects/ui-components/src/styles/normalize_custom.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "browser": "projects/showroom/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -63,9 +67,7 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true,
@@ -177,12 +179,15 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/webapp",
+            "outputPath": {
+              "base": "dist/webapp"
+            },
             "index": "projects/webapp/src/index.html",
-            "main": "projects/webapp/src/main.ts",
-            "polyfills": "projects/webapp/src/polyfills.ts",
+            "polyfills": [
+              "projects/webapp/src/polyfills.ts"
+            ],
             "tsConfig": "projects/webapp/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -190,7 +195,8 @@
               "projects/webapp/src/assets"
             ],
             "styles": ["projects/webapp/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "browser": "projects/webapp/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -215,9 +221,7 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true,

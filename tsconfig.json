@@ -14,7 +14,7 @@
         "./projects/ui-components/src"
       ]
     },
-    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "baseUrl": "./",
     "declaration": false,
     "experimentalDecorators": true,
