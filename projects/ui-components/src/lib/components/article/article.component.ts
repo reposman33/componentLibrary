@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-article',
-  templateUrl: './article.component.html',
-  styleUrls: ['./article.component.scss'],
+    selector: 'lib-article',
+    templateUrl: './article.component.html',
+    styleUrls: ['./article.component.scss'],
+    standalone: false
 })
 export class ArticleComponent implements OnInit {
   @Input() subTitle: string = '';

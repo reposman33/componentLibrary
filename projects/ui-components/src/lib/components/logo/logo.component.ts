@@ -1,8 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 @Component({
-	selector: 'lib-logo',
-	templateUrl: './logo.component.html',
-	styleUrls: ['./logo.component.scss'],
+    selector: 'lib-logo',
+    templateUrl: './logo.component.html',
+    styleUrls: ['./logo.component.scss'],
+    standalone: false
 })
 export class LogoComponent implements OnInit {
 	@Input() public imageUrl!: string;

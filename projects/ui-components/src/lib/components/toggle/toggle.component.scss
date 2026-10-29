@@ -1,9 +1,12 @@
+@use "sass:color";
+
 $article-heading-background-color: #cfd3dd;
 $article-expansion-speed: 0.5s;
 
 .caret--left,
 .caret--down {
-  background-color: darken($article-heading-background-color, 20%);
+  /* background-color: darken($article-heading-background-color, 20%); */
+  background-color: color.adjust($article-heading-background-color, $lightness: -20%);
   cursor: pointer;
   display: inline-block;
   margin-right: 4rem;

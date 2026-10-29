@@ -3,9 +3,10 @@ import { Align } from '@ui-components';
 import { CommunicationService } from '../../services/communication.service';
 
 @Component({
-  selector: 'page-header',
-  templateUrl: './header.page.html',
-  styleUrls: ['./header.page.scss'],
+    selector: 'page-header',
+    templateUrl: './header.page.html',
+    styleUrls: ['./header.page.scss'],
+    standalone: false
 })
 export class HeaderPageComponent implements AfterViewInit {
   htmlRef = `        <lib-header

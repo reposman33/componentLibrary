@@ -2,9 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Tab } from '@ui-components';
 
 @Component({
-	selector: 'lib-tab-group',
-	templateUrl: './tab-group.component.html',
-	styleUrls: ['./tab-group.component.scss'],
+    selector: 'lib-tab-group',
+    templateUrl: './tab-group.component.html',
+    styleUrls: ['./tab-group.component.scss'],
+    standalone: false
 })
 export class TabGroupComponent implements OnInit {
 	@Input() tabs: Tab[] = [];

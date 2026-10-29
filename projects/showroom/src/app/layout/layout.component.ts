@@ -4,9 +4,10 @@ import { displayMode, Link } from '../models/Types';
 import { CommunicationService } from '../services/communication.service';
 
 @Component({
-  selector: 'app-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss'],
+    selector: 'app-layout',
+    templateUrl: './layout.component.html',
+    styleUrls: ['./layout.component.scss'],
+    standalone: false
 })
 export class LayoutComponent implements OnInit {
   mode: displayMode = 'component';

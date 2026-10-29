@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-	selector: 'lib-image[imageUrl]',
-	templateUrl: './image.component.html',
-	styleUrls: ['./image.component.scss'],
+    selector: 'lib-image[imageUrl]',
+    templateUrl: './image.component.html',
+    styleUrls: ['./image.component.scss'],
+    standalone: false
 })
 export class ImageComponent {
 	@Input() imageUrl!: string;
