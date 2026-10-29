@@ -39,5 +39,6 @@ import { FormsModule } from '@angular/forms';
         RouterModule,
         TabGroupModule,
         TextModule,
-        ToggleModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        ToggleModule],
+        providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class PagesModule {}
