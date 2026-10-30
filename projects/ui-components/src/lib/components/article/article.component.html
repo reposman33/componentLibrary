@@ -1,16 +1,20 @@
 <div class="article">
   <div class="article__header">
     <div class="article__title">{{ title }}</div>
-    <div *ngIf="subTitle.length > 0" class="article__subTitle">
-      {{ subTitle }}
-    </div>
-    <lib-toggle *ngIf="toggle" (click)="drawerOpen = !drawerOpen"></lib-toggle>
+    @if (subTitle.length > 0) {
+      <div class="article__subTitle">
+        {{ subTitle }}
+      </div>
+    }
+    @if (toggle) {
+      <lib-toggle (click)="drawerOpen = !drawerOpen"></lib-toggle>
+    }
   </div>
   <div
     [ngClass]="
       drawerOpen || !toggle ? 'article__content--expanded' : 'article__content'
     "
-  >
+    >
     <div #header>
       <div class="article__content-header">
         <ng-content select="[slot=header]"></ng-content>

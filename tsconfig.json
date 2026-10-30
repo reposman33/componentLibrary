@@ -20,7 +20,7 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "module": "es2020",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "resolveJsonModule": true,

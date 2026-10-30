@@ -1,26 +1,26 @@
 <div class="page--content">
   <h2>Header component</h2>
 
-  <ng-container *ngIf="displayComponent">
+  @if (displayComponent) {
     <div class="component-section">
       <div class="component">
         <lib-header
           [align]="input_align"
           [title]="input_title"
           [subTitle]="input_subTitle"
-        >
+          >
         </lib-header>
       </div>
     </div>
-  </ng-container>
+  }
 
-  <ng-container *ngIf="displayCode">
+  @if (displayCode) {
     <div class="component-section">
       <div class="component code">
         <pre [innerText]="code"></pre>
       </div>
     </div>
-  </ng-container>
+  }
 
   <div class="panel component-section">
     <div class="controls component">
@@ -30,17 +30,17 @@
       </div>
       <div class="row__button">
         <label for="subTitle">subtitle</label
-        ><input type="text" name="subTitle" [(ngModel)]="input_subTitle" />
-      </div>
-      <div class="row__button">
-        <label for="align">align</label>
-        <select name="align" [(ngModel)]="input_align">
-          <option value="left">left</option>
-          <option value="center">center</option>
-          <option value="right">right</option>
-          <option value="around">around</option>
-        </select>
+          ><input type="text" name="subTitle" [(ngModel)]="input_subTitle" />
+        </div>
+        <div class="row__button">
+          <label for="align">align</label>
+          <select name="align" [(ngModel)]="input_align">
+            <option value="left">left</option>
+            <option value="center">center</option>
+            <option value="right">right</option>
+            <option value="around">around</option>
+          </select>
+        </div>
       </div>
     </div>
   </div>
-</div>
