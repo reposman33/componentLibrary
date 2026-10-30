@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ArticlePageComponentComponent } from './article.page';
+import { ArticlePageComponent } from './article.page';
 
 describe('ArticlePageComponent', () => {
 	let component: ArticlePageComponent;

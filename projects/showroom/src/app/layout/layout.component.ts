@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { displayMode, Link } from '../models/Types';
 import { CommunicationService } from '../services/communication.service';
@@ -7,10 +7,11 @@ import { CommunicationService } from '../services/communication.service';
     selector: 'app-layout',
     templateUrl: './layout.component.html',
     styleUrls: ['./layout.component.scss'],
-    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class LayoutComponent implements OnInit {
+  private communicationService: CommunicationService = inject(CommunicationService)
+
   mode: displayMode = 'component';
 
   public links: Link[] = [
@@ -26,7 +27,7 @@ export class LayoutComponent implements OnInit {
   pageViewMode: displayMode = 'component';
   UpdateComponentView!: Observable<displayMode>;
 
-  constructor(private communicationService: CommunicationService) {}
+  constructor() {}
 
   getPageViewMode() {
     return this.pageViewMode;

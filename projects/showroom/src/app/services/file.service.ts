@@ -8,11 +8,11 @@ export class FileService {
 
   constructor() {}
 
-  readFile(fileName: any) {
+  readFile(fileName: string): Promise<string> {
     const fileReader = new FileReader();
     const file = new File([], this.pathPrefix + fileName);
     return new Promise<string>((resolve, reject) => {
-      fileReader.addEventListener('load', (e) => {
+      fileReader.addEventListener('load', () => {
         if (fileReader.result) {
           console.log('fileReader = ', fileReader.result);
           resolve(fileReader.result.toString());

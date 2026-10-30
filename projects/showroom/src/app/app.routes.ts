@@ -1,11 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
-// SHOWROOM PAGES
-import { LayoutModule } from './layout/layout.module';
+import { Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
-
-import { PagesModule } from './pages/pages.module';
 import { LandingComponent } from './pages/landing/landing.component';
 import { HeaderPageComponent } from './pages/header/header.page';
 import { LogoComponent } from './pages/logo/logo.component';
@@ -15,7 +9,7 @@ import { ImagePageComponent } from './pages/image/image.page';
 import { TextPageComponent } from './pages/text/text.page';
 import { TogglePageComponent } from './pages/toggle/toggle.page';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
@@ -31,10 +25,3 @@ const routes: Routes = [
     ],
   },
 ];
-
-@NgModule({
-  declarations: [],
-  imports: [LayoutModule, PagesModule, RouterModule.forRoot(routes)],
-  exports: [LayoutModule],
-})
-export class AppRoutingModule {}

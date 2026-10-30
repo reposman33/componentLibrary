@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ChangeDetectionStrategy } from '@angular/core';
+import { AfterViewInit, Component, inject, OnInit } from '@angular/core';
 import { Align } from '@ui-components';
 import { CommunicationService } from '../../services/communication.service';
 
@@ -6,10 +6,9 @@ import { CommunicationService } from '../../services/communication.service';
     selector: 'page-header',
     templateUrl: './header.page.html',
     styleUrls: ['./header.page.scss'],
-    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
-export class HeaderPageComponent implements AfterViewInit {
+export class HeaderPageComponent implements AfterViewInit, OnInit {
   htmlRef = `        <lib-header
           [align]="input_align"
           [title]="input_title"
@@ -23,7 +22,9 @@ export class HeaderPageComponent implements AfterViewInit {
   input_subTitle = 'een verhaal over moed en wanhoop';
   input_align = 'left' as Align;
 
-  constructor(private _communicationService: CommunicationService) {
+  private _communicationService: CommunicationService = inject(CommunicationService)
+
+  ngOnInit() {
     this._communicationService.getMessage().subscribe((viewMode) => {
       this.displayCode = viewMode.mode === 'code';
       this.displayComponent = viewMode.mode === 'component';

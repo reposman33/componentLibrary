@@ -1,10 +1,10 @@
-import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
     selector: 'lib-article',
     templateUrl: './article.component.html',
     styleUrls: ['./article.component.scss'],
-    changeDetection: ChangeDetectionStrategy.Eager,
+    
     standalone: false
 })
 export class ArticleComponent implements OnInit {

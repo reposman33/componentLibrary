@@ -1,11 +1,11 @@
-import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Tab } from '@ui-components';
 
 @Component({
     selector: 'lib-tab-group',
     templateUrl: './tab-group.component.html',
     styleUrls: ['./tab-group.component.scss'],
-    changeDetection: ChangeDetectionStrategy.Eager,
+    
     standalone: false
 })
 export class TabGroupComponent implements OnInit {
