@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
+import { NgClass } from '@angular/common';
 
 @Component({
     selector: 'lib-image[imageUrl]',
     templateUrl: './image.component.html',
     styleUrls: ['./image.component.scss'],
-    
-    standalone: false
+    imports: [NgClass]
 })
 export class ImageComponent {
 	@Input() imageUrl!: string;

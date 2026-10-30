@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
+import { NgClass } from '@angular/common';
 
 @Component({
     selector: 'lib-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
-    
-    standalone: false
+    imports: [NgClass]
 })
 export class HeaderComponent {
   @Input() title!: string;

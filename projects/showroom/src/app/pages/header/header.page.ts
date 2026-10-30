@@ -1,12 +1,14 @@
 import { AfterViewInit, Component, inject, OnInit } from '@angular/core';
 import { Align } from '@ui-components';
 import { CommunicationService } from '../../services/communication.service';
+import { HeaderComponent } from '../../../../../ui-components/src/lib/components/header/header.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'page-header',
     templateUrl: './header.page.html',
     styleUrls: ['./header.page.scss'],
-    standalone: false
+    imports: [HeaderComponent, FormsModule]
 })
 export class HeaderPageComponent implements AfterViewInit, OnInit {
   htmlRef = `        <lib-header

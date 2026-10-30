@@ -8,8 +8,8 @@ describe('TabGroupPageComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [TabGroupPageComponent],
-		}).compileComponents();
+    imports: [TabGroupPageComponent],
+}).compileComponents();
 	});
 
 	beforeEach(() => {

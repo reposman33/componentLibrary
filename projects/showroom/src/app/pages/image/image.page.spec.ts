@@ -8,8 +8,8 @@ describe('ImagePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ImagePageComponent ]
-    })
+    imports: [ImagePageComponent]
+})
     .compileComponents();
   });
 

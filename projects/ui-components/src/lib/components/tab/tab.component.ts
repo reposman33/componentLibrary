@@ -1,12 +1,12 @@
 import { Component, Input, Output, SimpleChanges } from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import { NgClass } from '@angular/common';
 
 @Component({
     selector: 'lib-tab',
     templateUrl: './tab.component.html',
     styleUrls: ['./tab.component.scss'],
-    
-    standalone: false
+    imports: [NgClass]
 })
 export class TabComponent {
 	@Input() public title!: string;

@@ -8,8 +8,8 @@ describe('TogglePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TogglePageComponent ]
-    })
+    imports: [TogglePageComponent]
+})
     .compileComponents();
   });
 
