@@ -41,7 +41,7 @@ $article__header--background-color: #f1f6f7;
   display: block;
   font-size: 1.3rem;
   height: 2rem;
-  overflow-y: auto;
+  overflow-y: hidden;
   padding: 1rem;
   transition: height $article-expansion-speed ease-in-out,
     color $article-expansion-speed ease-in-out;
