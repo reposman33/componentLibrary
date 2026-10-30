@@ -18,7 +18,7 @@ import { ImagePageComponent } from './image/image.page';
 import { TextPageComponent } from './text/text.page';
 import { DemoComponentsModule } from '../components/components.module';
 import { TogglePageComponent } from './toggle/toggle.page';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, withXhr } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({ declarations: [
@@ -40,5 +40,5 @@ import { FormsModule } from '@angular/forms';
         TabGroupModule,
         TextModule,
         ToggleModule],
-        providers: [provideHttpClient(withInterceptorsFromDi())] })
+        providers: [provideHttpClient(withXhr(), withInterceptorsFromDi())] })
 export class PagesModule {}

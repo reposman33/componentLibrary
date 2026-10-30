@@ -1,10 +1,11 @@
-import { Component, Input, Output, SimpleChanges } from '@angular/core';
+import { Component, Input, Output, SimpleChanges, ChangeDetectionStrategy } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'lib-tab',
     templateUrl: './tab.component.html',
     styleUrls: ['./tab.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class TabComponent {

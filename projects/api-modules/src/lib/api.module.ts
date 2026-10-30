@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { provideHttpClient, withInterceptorsFromDi, withJsonpSupport } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, withJsonpSupport, withXhr } from '@angular/common/http';
 
 @NgModule({ declarations: [],
-    exports: [], imports: [], providers: [provideHttpClient(withInterceptorsFromDi(), withJsonpSupport())] })
+    exports: [], imports: [], providers: [provideHttpClient(withXhr(), withInterceptorsFromDi(), withJsonpSupport())] })
 export class ApiModule {}

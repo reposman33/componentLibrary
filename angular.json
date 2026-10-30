@@ -81,6 +81,15 @@
                   "output": "/assets"
                 }
               ]
+            },
+            "testing": {
+              "aot": false,
+              "optimization": false,
+              "extractLicenses": false,
+              "styles": [
+                "projects/showroom/src/styles.scss"
+              ],
+              "polyfills": "projects/showroom/src/polyfills.ts"
             }
           },
           "defaultConfiguration": "development"
@@ -116,19 +125,21 @@
           }
         },
         "test": {
-          "builder": "@angular/build:karma",
+          "builder": "@angular/build:unit-test",
           "options": {
-            "main": "projects/showroom/src/test.ts",
-            "polyfills": "projects/showroom/src/polyfills.ts",
             "tsConfig": "projects/showroom/tsconfig.spec.json",
-            "karmaConfig": "projects/showroom/karma.conf.js",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/showroom/src/favicon.ico",
-              "projects/showroom/src/assets"
+            "reporters": [
+              "default"
             ],
-            "styles": ["projects/showroom/src/styles.scss"],
-            "scripts": []
+            "coverageReporters": [
+              "html",
+              "text-summary"
+            ],
+            "setupFiles": [
+              "projects/showroom/src/test.ts"
+            ],
+            "buildTarget": ":build:testing",
+            "runner": "vitest"
           }
         }
       }
@@ -231,6 +242,12 @@
                   "with": "projects/showroom/src/environments/environment.dev.ts"
                 }
               ]
+            },
+            "testing": {
+              "aot": false,
+              "optimization": false,
+              "extractLicenses": false,
+              "polyfills": "projects/webapp/src/polyfills.ts"
             }
           },
           "defaultConfiguration": "production"
@@ -260,19 +277,21 @@
           }
         },
         "test": {
-          "builder": "@angular/build:karma",
+          "builder": "@angular/build:unit-test",
           "options": {
-            "main": "projects/webapp/src/test.ts",
-            "polyfills": "projects/webapp/src/polyfills.ts",
             "tsConfig": "projects/webapp/tsconfig.spec.json",
-            "karmaConfig": "projects/webapp/karma.conf.js",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/webapp/src/favicon.ico",
-              "projects/webapp/src/assets"
+            "reporters": [
+              "default"
             ],
-            "styles": ["projects/webapp/src/styles.scss"],
-            "scripts": []
+            "coverageReporters": [
+              "html",
+              "text-summary"
+            ],
+            "setupFiles": [
+              "projects/webapp/src/test.ts"
+            ],
+            "buildTarget": ":build:testing",
+            "runner": "vitest"
           }
         }
       }

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, ChangeDetectionStrategy } from '@angular/core';
 import { Align } from '@ui-components';
 import { CommunicationService } from '../../services/communication.service';
 
@@ -6,6 +6,7 @@ import { CommunicationService } from '../../services/communication.service';
     selector: 'page-header',
     templateUrl: './header.page.html',
     styleUrls: ['./header.page.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class HeaderPageComponent implements AfterViewInit {
