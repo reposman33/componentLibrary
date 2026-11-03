@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { Tab } from '@ui-components';
 import { TabComponent } from '../tab/tab.component';
 import { RouterOutlet } from '@angular/router';
@@ -9,16 +9,7 @@ import { RouterOutlet } from '@angular/router';
     styleUrls: ['./tab-group.component.scss'],
     imports: [TabComponent, RouterOutlet]
 })
-export class TabGroupComponent implements OnInit {
-	@Input() tabs: Tab[] = [];
-	public selectedTab: string = '';
-
-	ngOnInit(): void {
-		this.selectedTab = this.tabs[0].title;
-	}
-
-	// unhilite tabs when new tab becomes active
-	selectTab(tabTitle: string) {
-		this.selectedTab = tabTitle;
-	}
+export class TabGroupComponent {
+	tabs = input<Tab[]>([]);
+	selectedTabsection = signal<string>('bio');
 }

@@ -1,18 +1,18 @@
 <div class="article">
   <div class="article__header">
-    <div class="article__title">{{ title }}</div>
+    <div class="article__title">{{ title() }}</div>
     @if (subTitle.length > 0) {
       <div class="article__subTitle">
-        {{ subTitle }}
+        {{ subTitle() }}
       </div>
     }
-    @if (toggle) {
-      <lib-toggle (click)="drawerOpen = !drawerOpen"></lib-toggle>
+    @if (toggle()) {
+      <lib-toggle (click)="drawerOpen.update(open => !open)"></lib-toggle>
     }
   </div>
   <div
     [ngClass]="
-      drawerOpen || !toggle ? 'article__content--expanded' : 'article__content'
+      drawerOpen() || !toggle() ? 'article__content--expanded' : 'article__content'
     "
     >
     <div #header>

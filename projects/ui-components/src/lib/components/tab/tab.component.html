@@ -1,6 +1,5 @@
 <a
-	(click)="handleClick(section)"
-	routerLinkActive="tab--selected"
-	[ngClass]="{ 'tab--selected': selected, 'tab-item': true }"
-	>{{ title }}</a
+	(click)="handleClick(section())"
+	[class]="{ 'tab--selected': selected(), 'tab-item': true }"
+	>{{ title() }} </a
 >

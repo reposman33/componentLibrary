@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { NgClass } from '@angular/common';
 
 @Component({
@@ -8,9 +8,9 @@ import { NgClass } from '@angular/common';
     imports: [NgClass]
 })
 export class HeaderComponent {
-  @Input() title!: string;
-  @Input() subTitle: string = '';
-  @Input() align: Align = 'left';
+  title = input<string>('')
+  subTitle = input<string>('')
+  align = input<Align>('left')
   public separator = ' | ';
 }
 

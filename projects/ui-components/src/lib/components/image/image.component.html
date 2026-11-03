@@ -1,13 +1,13 @@
 <div class="container">
 	<img
-		[src]="imageUrl"
-		[alt]="alt"
-		[title]="alt"
+		[src]="imageUrl()"
+		[alt]="alt()"
+		[title]="alt()"
 		[ngClass]="imageClass"
 		(click)="expandImage()"
 	/>
 
 	<figure class="image__figure">
-		{{ caption }}
+		{{ caption() }}
 	</figure>
 </div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
     selector: 'lib-text',
@@ -6,8 +6,8 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./text.component.scss']
 })
 export class TextComponent {
-	@Input() title: string = '';
-	@Input() subTitle: string = '';
+    title = input<string>('title')
+	subTitle = input<string>('subTitle')
 
 	public titleSeparator: string = '|';
 }

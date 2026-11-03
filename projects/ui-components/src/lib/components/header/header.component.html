@@ -1,15 +1,15 @@
 <div
 	class="header"
 	[ngClass]="{
-		'justify-left': align === 'left',
-		'justify-right': align === 'right',
-		'justify-around': align === 'around'
+		'justify-left': align() === 'left',
+		'justify-right': align() === 'right',
+		'justify-around': align() === 'around'
 	}"
 >
 	<span class="logo">
 		<ng-content select="[slot=logo]"></ng-content>
 	</span>
-	<span class="header__title">{{ title }}</span>
-	<span class="header__title-separator">{{ subTitle.length > 0 ? separator : '' }}</span>
-	<span class="header__subtitle">{{ subTitle }}</span>
+	<span class="header__title">{{ title() }}</span>
+	<span class="header__title-separator">{{ subTitle().length > 0 ? separator : '' }}</span>
+	<span class="header__subtitle">{{ subTitle() }}</span>
 </div>

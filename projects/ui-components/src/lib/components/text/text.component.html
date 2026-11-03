@@ -1,12 +1,12 @@
 <div class="text__container">
-  @if (title) {
+  @if (title()) {
     <div class="text__header">
       <div class="text__title">
-        {{ title }}
+        {{ title() }}
       </div>
       <span class="text__title-separator"> {{ titleSeparator }}</span>
       <div class="subTitle">
-        {{ subTitle }}
+        {{ subTitle() }}
       </div>
     </div>
   }

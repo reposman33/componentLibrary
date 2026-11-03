@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { ToggleComponent } from '../toggle/toggle.component';
 import { NgClass } from '@angular/common';
 
@@ -8,12 +8,9 @@ import { NgClass } from '@angular/common';
     styleUrls: ['./article.component.scss'],
     imports: [ToggleComponent, NgClass]
 })
-export class ArticleComponent implements OnInit {
-  @Input() subTitle: string = '';
-  @Input() title: string = '';
-  @Input() toggle: boolean = false;
-
-  public drawerOpen: boolean = false;
-
-  ngOnInit(): void {}
+export class ArticleComponent {
+  subTitle = input<string>('');
+  title = input<string>('');
+  toggle = input<boolean>(false);
+  public drawerOpen = signal<boolean>(false);
 }

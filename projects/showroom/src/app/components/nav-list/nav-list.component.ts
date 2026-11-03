@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input} from '@angular/core';
 
 @Component({
     selector: 'app-nav-list',
@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./nav-list.component.scss']
 })
 export class NavListComponent {
-	@Input() public type: string = '';
+	protected type = input('type');
 }

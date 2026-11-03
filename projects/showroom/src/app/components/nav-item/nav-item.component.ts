@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -8,5 +8,5 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     imports: [RouterLink, RouterLinkActive]
 })
 export class NavItemComponent {
-	@Input() public url!: string;
+	url = input.required<string>();
 }

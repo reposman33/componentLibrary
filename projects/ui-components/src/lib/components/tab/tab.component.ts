@@ -1,29 +1,18 @@
-import { Component, Input, Output, SimpleChanges } from '@angular/core';
-import { EventEmitter } from '@angular/core';
-import { NgClass } from '@angular/common';
-
+import { Component, computed, input, model, output } from '@angular/core';
 @Component({
     selector: 'lib-tab',
     templateUrl: './tab.component.html',
     styleUrls: ['./tab.component.scss'],
-    imports: [NgClass]
 })
 export class TabComponent {
-	@Input() public title!: string;
-	@Input() public section!: string;
-	@Input() public selectedTab: string = '';
+	title = input<string>('title')
+	section = input<string>('section')
+	selectedSection = model<string>()
+	selectSection = output<string>()
 
-	@Output() navigate: EventEmitter<string> = new EventEmitter();
-	@Output() select: EventEmitter<string> = new EventEmitter();
-
-	public selected: boolean = false;
-
-	ngOnChanges(changes: SimpleChanges) {
-		this.selected = changes.selectedTab.currentValue === this.title;
-	}
+	protected selected = computed(() => this.section() === this.selectedSection());
 
 	handleClick(section: string) {
-		this.select.emit(this.title);
-		this.navigate.emit(section);
+		this.selectSection.emit(section);
 	}
 }
