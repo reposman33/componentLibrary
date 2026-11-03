@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LogoComponent as LogoComponent_1 } from '../../../../../ui-components/src/lib/components/logo/logo.component';
+import { LogoComponent as LogoComponent_1 } from '@ui-components';
 
 @Component({
     selector: 'app-logo',

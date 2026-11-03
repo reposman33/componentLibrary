@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { TextComponent } from '../../../../../ui-components/src/lib/components/text/text.component';
-import { ImageComponent } from '../../../../../ui-components/src/lib/components/image/image.component';
+import { ImageComponent, TextComponent } from '@ui-components';
 
 @Component({
     selector: 'app-text',

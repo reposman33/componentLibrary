@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TabGroupComponent } from '../../../../../ui-components/src/lib/components/tab-group/tab-group.component';
+import { TabGroupComponent } from '@ui-components';
 
 @Component({
     selector: 'app-tab-group',

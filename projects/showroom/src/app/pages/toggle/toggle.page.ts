@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ToggleComponent } from '../../../../../ui-components/src/lib/components/toggle/toggle.component';
+import { ToggleComponent } from '@ui-components';
 
 @Component({
     selector: 'page-toggle',

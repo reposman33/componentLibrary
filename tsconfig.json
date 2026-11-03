@@ -6,6 +6,9 @@
       "@api-modules": [
         "./projects/api-modules/src/lib/services"
       ],
+      "@services": [
+        "./projects/showroom/src/app/services"
+      ],
       "@ui-components": [
         "./projects/ui-components/src"
       ]

@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, inject, OnInit } from '@angular/core';
 import { Align } from '@ui-components';
-import { CommunicationService } from '../../services/communication.service';
-import { HeaderComponent } from '../../../../../ui-components/src/lib/components/header/header.component';
+import { CommunicationService } from '@services';
+import { HeaderComponent } from '@ui-components';
 import { FormsModule } from '@angular/forms';
 
 @Component({
