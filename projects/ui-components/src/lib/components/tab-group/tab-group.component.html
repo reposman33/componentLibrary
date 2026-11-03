@@ -5,8 +5,7 @@
         <lib-tab
           [title]="tab.title"
           [section]="tab.section"
-          [selectedSection]="selectedTabsection()"
-          (selectSection)="selectedTabsection.set($event)"
+          [(selectedSection)]="selectedTabsection"
         ></lib-tab>
       </div>
     }
