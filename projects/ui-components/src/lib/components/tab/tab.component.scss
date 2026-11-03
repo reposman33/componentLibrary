@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $tab-border-dark: #b77f7f;
 $tab-border-light: #d9adad;
 $tab-text-color: #4869b5;
@@ -24,7 +26,7 @@ $tab-backgroundColor-darkenMedium: 15%;
 }
 
 .tab--active {
-	color: darken(#e48e96, $tab-backgroundColor-darkenSmall);
+		color: color.adjust(#e48e96, $lightness: -$tab-backgroundColor-darkenSmall);
 }
 
 .tab--selected {

@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ImageComponent } from '../../../../../ui-components/src/lib/components/image/image.component';
 
 @Component({
-  selector: 'app-image',
-  templateUrl: './image.page.html',
-  styleUrls: ['./image.page.scss']
+    selector: 'app-image',
+    templateUrl: './image.page.html',
+    styleUrls: ['./image.page.scss'],
+    imports: [ImageComponent]
 })
-export class ImagePage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class ImagePageComponent {
 }

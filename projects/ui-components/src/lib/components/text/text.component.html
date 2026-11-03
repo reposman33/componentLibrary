@@ -1,14 +1,16 @@
 <div class="text__container">
-	<div class="text__header" *ngIf="title">
-		<div class="text__title">
-			{{ title }}
-		</div>
-		<span class="text__title-separator"> {{ titleSeparator }}</span>
-		<div class="subTitle">
-			{{ subTitle }}
-		</div>
-	</div>
-	<div>
-		<ng-content></ng-content>
-	</div>
+  @if (title) {
+    <div class="text__header">
+      <div class="text__title">
+        {{ title }}
+      </div>
+      <span class="text__title-separator"> {{ titleSeparator }}</span>
+      <div class="subTitle">
+        {{ subTitle }}
+      </div>
+    </div>
+  }
+  <div>
+    <ng-content></ng-content>
+  </div>
 </div>

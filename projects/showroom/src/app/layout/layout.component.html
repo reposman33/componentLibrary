@@ -5,35 +5,37 @@
     <h2>Componenten</h2>
 
     <app-nav-list>
-      <app-nav-item *ngFor="let link of links" [url]="link.url">
-        {{ link.title }}
-      </app-nav-item>
+      @for (link of links; track link) {
+        <app-nav-item [url]="link.url">
+          {{ link.title }}
+        </app-nav-item>
+      }
     </app-nav-list>
   </nav>
-  
+
   <app-page class="layout__page-content">
-      <div class="icons">
-        <span
+    <div class="icons">
+      <span
           [ngClass]="{
             'material-symbols-outlined': true,
             'icon--selected': pageViewMode === 'component'
           }"
-          component
-          (click)="setPageViewMode('component')"
+        component
+        (click)="setPageViewMode('component')"
         >
-          visibility
-        </span>
-        <span
+        visibility
+      </span>
+      <span
           [ngClass]="{
             'material-symbols-outlined': true,
             'icon--selected': pageViewMode === 'code'
           }"
-          code
-          (click)="setPageViewMode('code')"
+        code
+        (click)="setPageViewMode('code')"
         >
-          code
-        </span>
-      </div>
-      <router-outlet></router-outlet>
+        code
+      </span>
+    </div>
+    <router-outlet></router-outlet>
   </app-page>
 </div>

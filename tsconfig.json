@@ -3,25 +3,26 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "@api-modules": ["projects/api-modules/src/lib/services"],
-      "@ui-components": ["projects/ui-components/src"]
+      "@api-modules": [
+        "./projects/api-modules/src/lib/services"
+      ],
+      "@ui-components": [
+        "./projects/ui-components/src"
+      ]
     },
-    "baseUrl": "./",
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-    "outDir": "./dist/out-tsc",
-    "strict": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
+    "esModuleInterop": true,
     "declaration": false,
-    "downlevelIteration": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2017",
     "module": "es2020",
-    "lib": ["es2018", "dom"]
+    "moduleResolution": "bundler",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES2022",
+    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

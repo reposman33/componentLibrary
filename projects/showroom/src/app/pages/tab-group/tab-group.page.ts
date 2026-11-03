@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { TabGroupComponent } from '../../../../../ui-components/src/lib/components/tab-group/tab-group.component';
 
 @Component({
-	selector: 'app-tab-group',
-	templateUrl: './tab-group.page.html',
-	styleUrls: ['./tab-group.page.scss'],
+    selector: 'app-tab-group',
+    templateUrl: './tab-group.page.html',
+    styleUrls: ['./tab-group.page.scss'],
+    imports: [TabGroupComponent]
 })
-export class TabGroupPage implements OnInit {
+export class TabGroupPageComponent {
 	public tabs = [
 		{
 			title: 'About',
@@ -24,7 +26,4 @@ export class TabGroupPage implements OnInit {
 			section: 'links',
 		},
 	];
-	constructor() {}
-
-	ngOnInit(): void {}
 }
